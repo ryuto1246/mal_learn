@@ -3,7 +3,5 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/app.dart';
 
 void main() {
-  runApp(
-    const ProviderScope(child: App()),
-  );
+  runApp(const ProviderScope(child: App()));
 }
