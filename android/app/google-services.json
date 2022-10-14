@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "986918938285",
+    "project_id": "mal-learn-2",
+    "storage_bucket": "mal-learn-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986918938285:android:f48a8c86b9060f69838824",
+        "android_client_info": {
+          "package_name": "com.example.mal_learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986918938285-ca37kcu3d0db02o7kvs382uemkca088s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMXHmKCjbwhAF1rXv_iL319X24eoh4i_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986918938285-ca37kcu3d0db02o7kvs382uemkca088s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
