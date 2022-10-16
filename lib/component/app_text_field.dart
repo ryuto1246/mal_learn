@@ -68,7 +68,11 @@ class _AppTextFieldState extends State<AppTextField> {
           suffixIconConstraints:
               const BoxConstraints(maxHeight: Dimens.textFieldSuffixHeight),
         ),
-        onChanged: _onChanged,
+        onChanged: (String? value) {
+          if (_onChanged != null) {
+            _onChanged!(value ?? '');
+          }
+        },
         validator: (String? value) {
           final result = _validators
               .where((validator) => validator.validate(value) == false)

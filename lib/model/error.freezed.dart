@@ -29,6 +29,7 @@ mixin _$AppError {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +45,7 @@ mixin _$AppError {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +61,7 @@ mixin _$AppError {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -75,6 +78,7 @@ mixin _$AppError {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -90,6 +94,7 @@ mixin _$AppError {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -105,6 +110,7 @@ mixin _$AppError {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,8 +152,8 @@ class __$$_EmailAleadyInUseCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_EmailAleadyInUse extends _EmailAleadyInUse {
-  const _$_EmailAleadyInUse() : super._();
+class _$_EmailAleadyInUse implements _EmailAleadyInUse {
+  const _$_EmailAleadyInUse();
 
   @override
   String toString() {
@@ -177,6 +183,7 @@ class _$_EmailAleadyInUse extends _EmailAleadyInUse {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return emailAlreadyInUse();
   }
@@ -195,6 +202,7 @@ class _$_EmailAleadyInUse extends _EmailAleadyInUse {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -213,6 +221,7 @@ class _$_EmailAleadyInUse extends _EmailAleadyInUse {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -235,6 +244,7 @@ class _$_EmailAleadyInUse extends _EmailAleadyInUse {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -253,6 +263,7 @@ class _$_EmailAleadyInUse extends _EmailAleadyInUse {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -271,6 +282,7 @@ class _$_EmailAleadyInUse extends _EmailAleadyInUse {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -280,9 +292,8 @@ class _$_EmailAleadyInUse extends _EmailAleadyInUse {
   }
 }
 
-abstract class _EmailAleadyInUse extends AppError {
+abstract class _EmailAleadyInUse implements AppError {
   const factory _EmailAleadyInUse() = _$_EmailAleadyInUse;
-  const _EmailAleadyInUse._() : super._();
 }
 
 /// @nodoc
@@ -305,8 +316,8 @@ class __$$_InvalidEmailCopyWithImpl<$Res> extends _$AppErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InvalidEmail extends _InvalidEmail {
-  const _$_InvalidEmail() : super._();
+class _$_InvalidEmail implements _InvalidEmail {
+  const _$_InvalidEmail();
 
   @override
   String toString() {
@@ -336,6 +347,7 @@ class _$_InvalidEmail extends _InvalidEmail {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return invalidEmail();
   }
@@ -354,6 +366,7 @@ class _$_InvalidEmail extends _InvalidEmail {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return invalidEmail?.call();
   }
@@ -372,6 +385,7 @@ class _$_InvalidEmail extends _InvalidEmail {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -394,6 +408,7 @@ class _$_InvalidEmail extends _InvalidEmail {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return invalidEmail(this);
   }
@@ -412,6 +427,7 @@ class _$_InvalidEmail extends _InvalidEmail {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return invalidEmail?.call(this);
   }
@@ -430,6 +446,7 @@ class _$_InvalidEmail extends _InvalidEmail {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -439,9 +456,8 @@ class _$_InvalidEmail extends _InvalidEmail {
   }
 }
 
-abstract class _InvalidEmail extends AppError {
+abstract class _InvalidEmail implements AppError {
   const factory _InvalidEmail() = _$_InvalidEmail;
-  const _InvalidEmail._() : super._();
 }
 
 /// @nodoc
@@ -465,8 +481,8 @@ class __$$_OperationNotAllowedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_OperationNotAllowed extends _OperationNotAllowed {
-  const _$_OperationNotAllowed() : super._();
+class _$_OperationNotAllowed implements _OperationNotAllowed {
+  const _$_OperationNotAllowed();
 
   @override
   String toString() {
@@ -496,6 +512,7 @@ class _$_OperationNotAllowed extends _OperationNotAllowed {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return operationNotAllowed();
   }
@@ -514,6 +531,7 @@ class _$_OperationNotAllowed extends _OperationNotAllowed {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return operationNotAllowed?.call();
   }
@@ -532,6 +550,7 @@ class _$_OperationNotAllowed extends _OperationNotAllowed {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -554,6 +573,7 @@ class _$_OperationNotAllowed extends _OperationNotAllowed {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return operationNotAllowed(this);
   }
@@ -572,6 +592,7 @@ class _$_OperationNotAllowed extends _OperationNotAllowed {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -590,6 +611,7 @@ class _$_OperationNotAllowed extends _OperationNotAllowed {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -599,9 +621,8 @@ class _$_OperationNotAllowed extends _OperationNotAllowed {
   }
 }
 
-abstract class _OperationNotAllowed extends AppError {
+abstract class _OperationNotAllowed implements AppError {
   const factory _OperationNotAllowed() = _$_OperationNotAllowed;
-  const _OperationNotAllowed._() : super._();
 }
 
 /// @nodoc
@@ -625,8 +646,8 @@ class __$$_RequiresRecentLoginCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RequiresRecentLogin extends _RequiresRecentLogin {
-  const _$_RequiresRecentLogin() : super._();
+class _$_RequiresRecentLogin implements _RequiresRecentLogin {
+  const _$_RequiresRecentLogin();
 
   @override
   String toString() {
@@ -656,6 +677,7 @@ class _$_RequiresRecentLogin extends _RequiresRecentLogin {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return requiresRecentLogin();
   }
@@ -674,6 +696,7 @@ class _$_RequiresRecentLogin extends _RequiresRecentLogin {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return requiresRecentLogin?.call();
   }
@@ -692,6 +715,7 @@ class _$_RequiresRecentLogin extends _RequiresRecentLogin {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (requiresRecentLogin != null) {
@@ -714,6 +738,7 @@ class _$_RequiresRecentLogin extends _RequiresRecentLogin {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return requiresRecentLogin(this);
   }
@@ -732,6 +757,7 @@ class _$_RequiresRecentLogin extends _RequiresRecentLogin {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return requiresRecentLogin?.call(this);
   }
@@ -750,6 +776,7 @@ class _$_RequiresRecentLogin extends _RequiresRecentLogin {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (requiresRecentLogin != null) {
@@ -759,9 +786,8 @@ class _$_RequiresRecentLogin extends _RequiresRecentLogin {
   }
 }
 
-abstract class _RequiresRecentLogin extends AppError {
+abstract class _RequiresRecentLogin implements AppError {
   const factory _RequiresRecentLogin() = _$_RequiresRecentLogin;
-  const _RequiresRecentLogin._() : super._();
 }
 
 /// @nodoc
@@ -784,8 +810,8 @@ class __$$_UserDisabledCopyWithImpl<$Res> extends _$AppErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UserDisabled extends _UserDisabled {
-  const _$_UserDisabled() : super._();
+class _$_UserDisabled implements _UserDisabled {
+  const _$_UserDisabled();
 
   @override
   String toString() {
@@ -815,6 +841,7 @@ class _$_UserDisabled extends _UserDisabled {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return userDisabled();
   }
@@ -833,6 +860,7 @@ class _$_UserDisabled extends _UserDisabled {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return userDisabled?.call();
   }
@@ -851,6 +879,7 @@ class _$_UserDisabled extends _UserDisabled {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -873,6 +902,7 @@ class _$_UserDisabled extends _UserDisabled {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return userDisabled(this);
   }
@@ -891,6 +921,7 @@ class _$_UserDisabled extends _UserDisabled {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return userDisabled?.call(this);
   }
@@ -909,6 +940,7 @@ class _$_UserDisabled extends _UserDisabled {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -918,9 +950,8 @@ class _$_UserDisabled extends _UserDisabled {
   }
 }
 
-abstract class _UserDisabled extends AppError {
+abstract class _UserDisabled implements AppError {
   const factory _UserDisabled() = _$_UserDisabled;
-  const _UserDisabled._() : super._();
 }
 
 /// @nodoc
@@ -943,8 +974,8 @@ class __$$_UserNotFoundCopyWithImpl<$Res> extends _$AppErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UserNotFound extends _UserNotFound {
-  const _$_UserNotFound() : super._();
+class _$_UserNotFound implements _UserNotFound {
+  const _$_UserNotFound();
 
   @override
   String toString() {
@@ -974,6 +1005,7 @@ class _$_UserNotFound extends _UserNotFound {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return userNotFound();
   }
@@ -992,6 +1024,7 @@ class _$_UserNotFound extends _UserNotFound {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return userNotFound?.call();
   }
@@ -1010,6 +1043,7 @@ class _$_UserNotFound extends _UserNotFound {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1032,6 +1066,7 @@ class _$_UserNotFound extends _UserNotFound {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return userNotFound(this);
   }
@@ -1050,6 +1085,7 @@ class _$_UserNotFound extends _UserNotFound {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return userNotFound?.call(this);
   }
@@ -1068,6 +1104,7 @@ class _$_UserNotFound extends _UserNotFound {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1077,9 +1114,8 @@ class _$_UserNotFound extends _UserNotFound {
   }
 }
 
-abstract class _UserNotFound extends AppError {
+abstract class _UserNotFound implements AppError {
   const factory _UserNotFound() = _$_UserNotFound;
-  const _UserNotFound._() : super._();
 }
 
 /// @nodoc
@@ -1102,8 +1138,8 @@ class __$$_WeakPasswordCopyWithImpl<$Res> extends _$AppErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WeakPassword extends _WeakPassword {
-  const _$_WeakPassword() : super._();
+class _$_WeakPassword implements _WeakPassword {
+  const _$_WeakPassword();
 
   @override
   String toString() {
@@ -1133,6 +1169,7 @@ class _$_WeakPassword extends _WeakPassword {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return weakPassword();
   }
@@ -1151,6 +1188,7 @@ class _$_WeakPassword extends _WeakPassword {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return weakPassword?.call();
   }
@@ -1169,6 +1207,7 @@ class _$_WeakPassword extends _WeakPassword {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1191,6 +1230,7 @@ class _$_WeakPassword extends _WeakPassword {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return weakPassword(this);
   }
@@ -1209,6 +1249,7 @@ class _$_WeakPassword extends _WeakPassword {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return weakPassword?.call(this);
   }
@@ -1227,6 +1268,7 @@ class _$_WeakPassword extends _WeakPassword {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1236,9 +1278,8 @@ class _$_WeakPassword extends _WeakPassword {
   }
 }
 
-abstract class _WeakPassword extends AppError {
+abstract class _WeakPassword implements AppError {
   const factory _WeakPassword() = _$_WeakPassword;
-  const _WeakPassword._() : super._();
 }
 
 /// @nodoc
@@ -1261,8 +1302,8 @@ class __$$_WrongPasswordCopyWithImpl<$Res> extends _$AppErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WrongPassword extends _WrongPassword {
-  const _$_WrongPassword() : super._();
+class _$_WrongPassword implements _WrongPassword {
+  const _$_WrongPassword();
 
   @override
   String toString() {
@@ -1292,6 +1333,7 @@ class _$_WrongPassword extends _WrongPassword {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return wrongPassword();
   }
@@ -1310,6 +1352,7 @@ class _$_WrongPassword extends _WrongPassword {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return wrongPassword?.call();
   }
@@ -1328,6 +1371,7 @@ class _$_WrongPassword extends _WrongPassword {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -1350,6 +1394,7 @@ class _$_WrongPassword extends _WrongPassword {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return wrongPassword(this);
   }
@@ -1368,6 +1413,7 @@ class _$_WrongPassword extends _WrongPassword {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return wrongPassword?.call(this);
   }
@@ -1386,6 +1432,7 @@ class _$_WrongPassword extends _WrongPassword {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -1395,9 +1442,8 @@ class _$_WrongPassword extends _WrongPassword {
   }
 }
 
-abstract class _WrongPassword extends AppError {
+abstract class _WrongPassword implements AppError {
   const factory _WrongPassword() = _$_WrongPassword;
-  const _WrongPassword._() : super._();
 }
 
 /// @nodoc
@@ -1420,8 +1466,8 @@ class __$$_UndefinedCopyWithImpl<$Res> extends _$AppErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Undefined extends _Undefined {
-  const _$_Undefined() : super._();
+class _$_Undefined implements _Undefined {
+  const _$_Undefined();
 
   @override
   String toString() {
@@ -1451,6 +1497,7 @@ class _$_Undefined extends _Undefined {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return undefined();
   }
@@ -1469,6 +1516,7 @@ class _$_Undefined extends _Undefined {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return undefined?.call();
   }
@@ -1487,6 +1535,7 @@ class _$_Undefined extends _Undefined {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (undefined != null) {
@@ -1509,6 +1558,7 @@ class _$_Undefined extends _Undefined {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return undefined(this);
   }
@@ -1527,6 +1577,7 @@ class _$_Undefined extends _Undefined {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return undefined?.call(this);
   }
@@ -1545,6 +1596,7 @@ class _$_Undefined extends _Undefined {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (undefined != null) {
@@ -1554,9 +1606,8 @@ class _$_Undefined extends _Undefined {
   }
 }
 
-abstract class _Undefined extends AppError {
+abstract class _Undefined implements AppError {
   const factory _Undefined() = _$_Undefined;
-  const _Undefined._() : super._();
 }
 
 /// @nodoc
@@ -1580,8 +1631,8 @@ class __$$_NoInternetConnectionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_NoInternetConnection extends _NoInternetConnection {
-  const _$_NoInternetConnection() : super._();
+class _$_NoInternetConnection implements _NoInternetConnection {
+  const _$_NoInternetConnection();
 
   @override
   String toString() {
@@ -1611,6 +1662,7 @@ class _$_NoInternetConnection extends _NoInternetConnection {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return noInternetConnection();
   }
@@ -1629,6 +1681,7 @@ class _$_NoInternetConnection extends _NoInternetConnection {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return noInternetConnection?.call();
   }
@@ -1647,6 +1700,7 @@ class _$_NoInternetConnection extends _NoInternetConnection {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (noInternetConnection != null) {
@@ -1669,6 +1723,7 @@ class _$_NoInternetConnection extends _NoInternetConnection {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return noInternetConnection(this);
   }
@@ -1687,6 +1742,7 @@ class _$_NoInternetConnection extends _NoInternetConnection {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return noInternetConnection?.call(this);
   }
@@ -1705,6 +1761,7 @@ class _$_NoInternetConnection extends _NoInternetConnection {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (noInternetConnection != null) {
@@ -1714,9 +1771,8 @@ class _$_NoInternetConnection extends _NoInternetConnection {
   }
 }
 
-abstract class _NoInternetConnection extends AppError {
+abstract class _NoInternetConnection implements AppError {
   const factory _NoInternetConnection() = _$_NoInternetConnection;
-  const _NoInternetConnection._() : super._();
 }
 
 /// @nodoc
@@ -1739,8 +1795,8 @@ class __$$_ErrorOccurredCopyWithImpl<$Res> extends _$AppErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ErrorOccurred extends _ErrorOccurred {
-  const _$_ErrorOccurred() : super._();
+class _$_ErrorOccurred implements _ErrorOccurred {
+  const _$_ErrorOccurred();
 
   @override
   String toString() {
@@ -1770,6 +1826,7 @@ class _$_ErrorOccurred extends _ErrorOccurred {
     required TResult Function() undefined,
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
   }) {
     return errorOccurred();
   }
@@ -1788,6 +1845,7 @@ class _$_ErrorOccurred extends _ErrorOccurred {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
   }) {
     return errorOccurred?.call();
   }
@@ -1806,6 +1864,7 @@ class _$_ErrorOccurred extends _ErrorOccurred {
     TResult Function()? undefined,
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
     required TResult orElse(),
   }) {
     if (errorOccurred != null) {
@@ -1828,6 +1887,7 @@ class _$_ErrorOccurred extends _ErrorOccurred {
     required TResult Function(_Undefined value) undefined,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
   }) {
     return errorOccurred(this);
   }
@@ -1846,6 +1906,7 @@ class _$_ErrorOccurred extends _ErrorOccurred {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
   }) {
     return errorOccurred?.call(this);
   }
@@ -1864,6 +1925,7 @@ class _$_ErrorOccurred extends _ErrorOccurred {
     TResult Function(_Undefined value)? undefined,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
     required TResult orElse(),
   }) {
     if (errorOccurred != null) {
@@ -1873,7 +1935,171 @@ class _$_ErrorOccurred extends _ErrorOccurred {
   }
 }
 
-abstract class _ErrorOccurred extends AppError {
+abstract class _ErrorOccurred implements AppError {
   const factory _ErrorOccurred() = _$_ErrorOccurred;
-  const _ErrorOccurred._() : super._();
+}
+
+/// @nodoc
+abstract class _$$_RegisterProfileErrorCopyWith<$Res> {
+  factory _$$_RegisterProfileErrorCopyWith(_$_RegisterProfileError value,
+          $Res Function(_$_RegisterProfileError) then) =
+      __$$_RegisterProfileErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_RegisterProfileErrorCopyWithImpl<$Res>
+    extends _$AppErrorCopyWithImpl<$Res>
+    implements _$$_RegisterProfileErrorCopyWith<$Res> {
+  __$$_RegisterProfileErrorCopyWithImpl(_$_RegisterProfileError _value,
+      $Res Function(_$_RegisterProfileError) _then)
+      : super(_value, (v) => _then(v as _$_RegisterProfileError));
+
+  @override
+  _$_RegisterProfileError get _value => super._value as _$_RegisterProfileError;
+}
+
+/// @nodoc
+
+class _$_RegisterProfileError implements _RegisterProfileError {
+  const _$_RegisterProfileError();
+
+  @override
+  String toString() {
+    return 'AppError.registerProfileError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_RegisterProfileError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() requiresRecentLogin,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() weakPassword,
+    required TResult Function() wrongPassword,
+    required TResult Function() undefined,
+    required TResult Function() noInternetConnection,
+    required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
+  }) {
+    return registerProfileError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? requiresRecentLogin,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? wrongPassword,
+    TResult Function()? undefined,
+    TResult Function()? noInternetConnection,
+    TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
+  }) {
+    return registerProfileError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? requiresRecentLogin,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? wrongPassword,
+    TResult Function()? undefined,
+    TResult Function()? noInternetConnection,
+    TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
+    required TResult orElse(),
+  }) {
+    if (registerProfileError != null) {
+      return registerProfileError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_EmailAleadyInUse value) emailAlreadyInUse,
+    required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_RequiresRecentLogin value) requiresRecentLogin,
+    required TResult Function(_UserDisabled value) userDisabled,
+    required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_WeakPassword value) weakPassword,
+    required TResult Function(_WrongPassword value) wrongPassword,
+    required TResult Function(_Undefined value) undefined,
+    required TResult Function(_NoInternetConnection value) noInternetConnection,
+    required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
+  }) {
+    return registerProfileError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_EmailAleadyInUse value)? emailAlreadyInUse,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_RequiresRecentLogin value)? requiresRecentLogin,
+    TResult Function(_UserDisabled value)? userDisabled,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_Undefined value)? undefined,
+    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
+  }) {
+    return registerProfileError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_EmailAleadyInUse value)? emailAlreadyInUse,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_RequiresRecentLogin value)? requiresRecentLogin,
+    TResult Function(_UserDisabled value)? userDisabled,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_Undefined value)? undefined,
+    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
+    required TResult orElse(),
+  }) {
+    if (registerProfileError != null) {
+      return registerProfileError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RegisterProfileError implements AppError {
+  const factory _RegisterProfileError() = _$_RegisterProfileError;
 }

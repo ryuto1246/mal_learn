@@ -2,6 +2,7 @@ class Dimens {
   // padding
   static const paddingL = 32.0;
   static const paddingM = 24.0;
+  static const paddingS = 12.0;
   static const paddingXS = 4.0;
 
   //height

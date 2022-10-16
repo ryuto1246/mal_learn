@@ -1,9 +1,16 @@
 PODS:
+  - cloud_firestore (3.5.1):
+    - Firebase/Firestore (= 9.6.0)
+    - firebase_core
+    - Flutter
   - Firebase/Auth (9.6.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 9.6.0)
   - Firebase/CoreOnly (9.6.0):
     - FirebaseCore (= 9.6.0)
+  - Firebase/Firestore (9.6.0):
+    - Firebase/CoreOnly
+    - FirebaseFirestore (~> 9.6.0)
   - firebase_auth (3.11.2):
     - Firebase/Auth (= 9.6.0)
     - firebase_core
@@ -28,6 +35,14 @@ PODS:
     - nanopb (< 2.30910.0, >= 2.30908.0)
   - FirebaseCoreInternal (9.6.0):
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
+  - FirebaseFirestore (9.6.0):
+    - FirebaseFirestore/AutodetectLeveldb (= 9.6.0)
+  - FirebaseFirestore/AutodetectLeveldb (9.6.0):
+    - FirebaseFirestore/Base
+    - FirebaseFirestore/WithLeveldb
+  - FirebaseFirestore/Base (9.6.0)
+  - FirebaseFirestore/WithLeveldb (9.6.0):
+    - FirebaseFirestore/Base
   - Flutter (1.0.0)
   - GoogleDataTransport (9.2.0):
     - GoogleUtilities/Environment (~> 7.7)
@@ -57,8 +72,10 @@ PODS:
   - PromisesObjC (2.1.1)
 
 DEPENDENCIES:
+  - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
+  - FirebaseFirestore (from `https://github.com/invertase/firestore-ios-sdk-frameworks.git`, tag `9.6.0`)
   - Flutter (from `Flutter`)
 
 SPEC REPOS:
@@ -75,14 +92,25 @@ SPEC REPOS:
     - PromisesObjC
 
 EXTERNAL SOURCES:
+  cloud_firestore:
+    :path: ".symlinks/plugins/cloud_firestore/ios"
   firebase_auth:
     :path: ".symlinks/plugins/firebase_auth/ios"
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
+  FirebaseFirestore:
+    :git: https://github.com/invertase/firestore-ios-sdk-frameworks.git
+    :tag: 9.6.0
   Flutter:
     :path: Flutter
 
+CHECKOUT OPTIONS:
+  FirebaseFirestore:
+    :git: https://github.com/invertase/firestore-ios-sdk-frameworks.git
+    :tag: 9.6.0
+
 SPEC CHECKSUMS:
+  cloud_firestore: 49d69be2b924677f2974d8b38acc705c9908c09b
   Firebase: 5ae8b7cf8efce559a653aef0ad95bab3f427c351
   firebase_auth: 07a4db69cfa447ac42cb7faa560fc100708b707c
   firebase_core: 7c28ecc1e5dd74e03829ac3e9ff5ba3314e737a9
@@ -90,6 +118,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 2082fffcd855f95f883c0a1641133eb9bbe76d40
   FirebaseCoreDiagnostics: 99a495094b10a57eeb3ae8efa1665700ad0bdaa6
   FirebaseCoreInternal: bca76517fe1ed381e989f5e7d8abb0da8d85bed3
+  FirebaseFirestore: 9bfe2e814686fb3ba2495b97618b38987e4c8526
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
   GoogleUtilities: 1d20a6ad97ef46f67bbdec158ce00563a671ebb7
@@ -97,6 +126,6 @@ SPEC CHECKSUMS:
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: ef19549a9bc3046e7bb7d2fab4d021637c0c58a3
+PODFILE CHECKSUM: 7c286507c152984f0e6ad225a6b6621c22eecd89
 
 COCOAPODS: 1.11.2

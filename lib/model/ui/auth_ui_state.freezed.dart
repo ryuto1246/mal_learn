@@ -20,6 +20,7 @@ mixin _$AuthUiState {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
+    required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
     required TResult Function(AppError error) failure,
   }) =>
@@ -28,6 +29,7 @@ mixin _$AuthUiState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
   }) =>
@@ -36,6 +38,7 @@ mixin _$AuthUiState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
@@ -45,7 +48,8 @@ mixin _$AuthUiState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_SignInSuccess value) signUpSuccess,
+    required TResult Function(_SignInSuccess value) signInSuccess,
+    required TResult Function(_SignUpSuccess value) signUpSuccess,
     required TResult Function(_AuthFailure value) failure,
   }) =>
       throw _privateConstructorUsedError;
@@ -53,7 +57,8 @@ mixin _$AuthUiState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
@@ -61,7 +66,8 @@ mixin _$AuthUiState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
     required TResult orElse(),
   }) =>
@@ -124,6 +130,7 @@ class _$_Init implements _Init {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
+    required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
     required TResult Function(AppError error) failure,
   }) {
@@ -135,6 +142,7 @@ class _$_Init implements _Init {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
   }) {
@@ -146,6 +154,7 @@ class _$_Init implements _Init {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
@@ -161,7 +170,8 @@ class _$_Init implements _Init {
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_SignInSuccess value) signUpSuccess,
+    required TResult Function(_SignInSuccess value) signInSuccess,
+    required TResult Function(_SignUpSuccess value) signUpSuccess,
     required TResult Function(_AuthFailure value) failure,
   }) {
     return init(this);
@@ -172,7 +182,8 @@ class _$_Init implements _Init {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
   }) {
     return init?.call(this);
@@ -183,7 +194,8 @@ class _$_Init implements _Init {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
     required TResult orElse(),
   }) {
@@ -239,6 +251,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
+    required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
     required TResult Function(AppError error) failure,
   }) {
@@ -250,6 +263,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
   }) {
@@ -261,6 +275,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
@@ -276,7 +291,8 @@ class _$_Loading implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_SignInSuccess value) signUpSuccess,
+    required TResult Function(_SignInSuccess value) signInSuccess,
+    required TResult Function(_SignUpSuccess value) signUpSuccess,
     required TResult Function(_AuthFailure value) failure,
   }) {
     return loading(this);
@@ -287,7 +303,8 @@ class _$_Loading implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
   }) {
     return loading?.call(this);
@@ -298,7 +315,8 @@ class _$_Loading implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
     required TResult orElse(),
   }) {
@@ -355,7 +373,7 @@ class _$_SignInSuccess implements _SignInSuccess {
 
   @override
   String toString() {
-    return 'AuthUiState.signUpSuccess(user: $user)';
+    return 'AuthUiState.signInSuccess(user: $user)';
   }
 
   @override
@@ -380,10 +398,11 @@ class _$_SignInSuccess implements _SignInSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
+    required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
     required TResult Function(AppError error) failure,
   }) {
-    return signUpSuccess(user);
+    return signInSuccess(user);
   }
 
   @override
@@ -391,10 +410,11 @@ class _$_SignInSuccess implements _SignInSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
   }) {
-    return signUpSuccess?.call(user);
+    return signInSuccess?.call(user);
   }
 
   @override
@@ -402,12 +422,13 @@ class _$_SignInSuccess implements _SignInSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
   }) {
-    if (signUpSuccess != null) {
-      return signUpSuccess(user);
+    if (signInSuccess != null) {
+      return signInSuccess(user);
     }
     return orElse();
   }
@@ -417,10 +438,11 @@ class _$_SignInSuccess implements _SignInSuccess {
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_SignInSuccess value) signUpSuccess,
+    required TResult Function(_SignInSuccess value) signInSuccess,
+    required TResult Function(_SignUpSuccess value) signUpSuccess,
     required TResult Function(_AuthFailure value) failure,
   }) {
-    return signUpSuccess(this);
+    return signInSuccess(this);
   }
 
   @override
@@ -428,10 +450,11 @@ class _$_SignInSuccess implements _SignInSuccess {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
   }) {
-    return signUpSuccess?.call(this);
+    return signInSuccess?.call(this);
   }
 
   @override
@@ -439,12 +462,13 @@ class _$_SignInSuccess implements _SignInSuccess {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
     required TResult orElse(),
   }) {
-    if (signUpSuccess != null) {
-      return signUpSuccess(this);
+    if (signInSuccess != null) {
+      return signInSuccess(this);
     }
     return orElse();
   }
@@ -460,11 +484,165 @@ abstract class _SignInSuccess implements AuthUiState {
 }
 
 /// @nodoc
+abstract class _$$_SignUpSuccessCopyWith<$Res> {
+  factory _$$_SignUpSuccessCopyWith(
+          _$_SignUpSuccess value, $Res Function(_$_SignUpSuccess) then) =
+      __$$_SignUpSuccessCopyWithImpl<$Res>;
+  $Res call({User user});
+}
+
+/// @nodoc
+class __$$_SignUpSuccessCopyWithImpl<$Res>
+    extends _$AuthUiStateCopyWithImpl<$Res>
+    implements _$$_SignUpSuccessCopyWith<$Res> {
+  __$$_SignUpSuccessCopyWithImpl(
+      _$_SignUpSuccess _value, $Res Function(_$_SignUpSuccess) _then)
+      : super(_value, (v) => _then(v as _$_SignUpSuccess));
+
+  @override
+  _$_SignUpSuccess get _value => super._value as _$_SignUpSuccess;
+
+  @override
+  $Res call({
+    Object? user = freezed,
+  }) {
+    return _then(_$_SignUpSuccess(
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_SignUpSuccess implements _SignUpSuccess {
+  _$_SignUpSuccess(this.user);
+
+  @override
+  final User user;
+
+  @override
+  String toString() {
+    return 'AuthUiState.signUpSuccess(user: $user)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SignUpSuccess &&
+            const DeepCollectionEquality().equals(other.user, user));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_SignUpSuccessCopyWith<_$_SignUpSuccess> get copyWith =>
+      __$$_SignUpSuccessCopyWithImpl<_$_SignUpSuccess>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function() loading,
+    required TResult Function(User user) signInSuccess,
+    required TResult Function(User user) signUpSuccess,
+    required TResult Function(AppError error) failure,
+  }) {
+    return signUpSuccess(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
+    TResult Function(User user)? signUpSuccess,
+    TResult Function(AppError error)? failure,
+  }) {
+    return signUpSuccess?.call(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
+    TResult Function(User user)? signUpSuccess,
+    TResult Function(AppError error)? failure,
+    required TResult orElse(),
+  }) {
+    if (signUpSuccess != null) {
+      return signUpSuccess(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Init value) init,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_SignInSuccess value) signInSuccess,
+    required TResult Function(_SignUpSuccess value) signUpSuccess,
+    required TResult Function(_AuthFailure value) failure,
+  }) {
+    return signUpSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Init value)? init,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
+    TResult Function(_AuthFailure value)? failure,
+  }) {
+    return signUpSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Init value)? init,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
+    TResult Function(_AuthFailure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (signUpSuccess != null) {
+      return signUpSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SignUpSuccess implements AuthUiState {
+  factory _SignUpSuccess(final User user) = _$_SignUpSuccess;
+
+  User get user;
+  @JsonKey(ignore: true)
+  _$$_SignUpSuccessCopyWith<_$_SignUpSuccess> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 abstract class _$$_AuthFailureCopyWith<$Res> {
   factory _$$_AuthFailureCopyWith(
           _$_AuthFailure value, $Res Function(_$_AuthFailure) then) =
       __$$_AuthFailureCopyWithImpl<$Res>;
   $Res call({AppError error});
+
+  $AppErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
@@ -487,6 +665,13 @@ class __$$_AuthFailureCopyWithImpl<$Res> extends _$AuthUiStateCopyWithImpl<$Res>
           : error // ignore: cast_nullable_to_non_nullable
               as AppError,
     ));
+  }
+
+  @override
+  $AppErrorCopyWith<$Res> get error {
+    return $AppErrorCopyWith<$Res>(_value.error, (value) {
+      return _then(_value.copyWith(error: value));
+    });
   }
 }
 
@@ -525,6 +710,7 @@ class _$_AuthFailure implements _AuthFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
+    required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
     required TResult Function(AppError error) failure,
   }) {
@@ -536,6 +722,7 @@ class _$_AuthFailure implements _AuthFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
   }) {
@@ -547,6 +734,7 @@ class _$_AuthFailure implements _AuthFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
+    TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
@@ -562,7 +750,8 @@ class _$_AuthFailure implements _AuthFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_SignInSuccess value) signUpSuccess,
+    required TResult Function(_SignInSuccess value) signInSuccess,
+    required TResult Function(_SignUpSuccess value) signUpSuccess,
     required TResult Function(_AuthFailure value) failure,
   }) {
     return failure(this);
@@ -573,7 +762,8 @@ class _$_AuthFailure implements _AuthFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
   }) {
     return failure?.call(this);
@@ -584,7 +774,8 @@ class _$_AuthFailure implements _AuthFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Loading value)? loading,
-    TResult Function(_SignInSuccess value)? signUpSuccess,
+    TResult Function(_SignInSuccess value)? signInSuccess,
+    TResult Function(_SignUpSuccess value)? signUpSuccess,
     TResult Function(_AuthFailure value)? failure,
     required TResult orElse(),
   }) {

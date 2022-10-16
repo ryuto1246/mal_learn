@@ -16,5 +16,5 @@ class AppError with _$AppError {
   const factory AppError.undefined() = _Undefined;
   const factory AppError.noInternetConnection() = _NoInternetConnection;
   const factory AppError.errorOccurred() = _ErrorOccurred;
-  const AppError._();
+  const factory AppError.registerProfileError() = _RegisterProfileError;
 }

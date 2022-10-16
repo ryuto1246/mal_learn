@@ -16,6 +16,9 @@ dependencies:
   freezed_annotation: ^2.1.0
   logger: ^1.1.0
   firebase_core: ^1.24.0
+  intl: ^0.17.0
+  flutter_datetime_picker: ^1.5.1
+  cloud_firestore: ^3.5.1
 
 dev_dependencies:
   flutter_test:
