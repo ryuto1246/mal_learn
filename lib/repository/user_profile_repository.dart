@@ -32,7 +32,12 @@ class UserProfileRepositoryImpliment extends UserProfileRepository {
 
       logger.d('Profile successfully registered.');
       return Result.success(
-        AppUser(uid, userName, birthDay, iconPath),
+        AppUser(
+          uid: uid,
+          userName: userName,
+          birthDay: birthDay,
+          iconPath: iconPath,
+        ),
       );
     } on Exception catch (e) {
       logger.e('failed to register profile: $e');

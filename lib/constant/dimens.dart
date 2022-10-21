@@ -8,4 +8,5 @@ class Dimens {
   //height
   static const buttonHeight = 45.0;
   static const textFieldSuffixHeight = 14.0;
+  static const userProfileHeaderHeight = 260.0;
 }

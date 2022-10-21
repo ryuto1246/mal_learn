@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/component/app_text_field.dart';
 import 'package:mal_learn/component/form_submit_button.dart';
+import 'package:mal_learn/component/overlay_loading_page.dart';
 import 'package:mal_learn/component/vertical_spacer.dart';
 import 'package:mal_learn/constant/assets.dart';
 import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/strings.dart';
 import 'package:mal_learn/provider/auth_provider.dart';
+import 'package:mal_learn/provider/user_profile_provider.dart';
+import 'package:mal_learn/view/home_screen.dart';
+import 'package:mal_learn/view/sign_up_screen.dart';
 
 class SignInScreen extends ConsumerStatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -32,20 +36,6 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
     });
   }
 
-  // void _setIsValidEmail(bool isValid) {
-  //   setState(() {
-  //           _isValidEmail = isValid;
-  //   });
-  // }
-
-  // void _setIsValidPassword(bool isValid) {
-  //   setState(() {
-  //     _isValidPassword = isValid;
-  //   });
-  // }
-
-  // bool _isValidAllForm() => _isValidEmail && _isValidPassword;
-
   Future<void> _signIn() async {
     ref.read(authViewModelProvider.notifier).signIn(
           FirebaseAuth.instance,
@@ -54,8 +44,37 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
         );
   }
 
+  void _initializeState() {
+    ref.read(authViewModelProvider.notifier).initializeState();
+  }
+
+  void _moveToSignUpScreen() {
+    _initializeState();
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<Scaffold>(
+        builder: (context) => const SignUpScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    return ref.watch(authViewModelProvider).maybeWhen(
+          signUpSuccess: (User user) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute<Scaffold>(
+                  builder: (context) => HomeScreen(user.uid),
+                ),
+              );
+            });
+            return const OverlayLoadingPage();
+          },
+          orElse: _buildSignInScreen,
+        );
+  }
+
+  Scaffold _buildSignInScreen() {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
@@ -86,19 +105,40 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                         Strings.signInTitle,
                         style: Theme.of(context).textTheme.headline2,
                       ),
-                      const VerticalSpacer(Dimens.paddingM),
+                      const VerticalSpacer(Dimens.paddingS),
                       _buildEmailField(),
                       const VerticalSpacer(Dimens.paddingM),
                       _buildPasswordField(),
                       const VerticalSpacer(Dimens.paddingM),
-                      SubmitButton(labelText: 'ログイン', onPressed: _signIn),
-                      const VerticalSpacer(Dimens.paddingM),
+                      _buildSubmitButton(),
+                      const VerticalSpacer(Dimens.paddingXS),
+                      _buildLinkToSignUpScreen(),
+                      const VerticalSpacer(Dimens.paddingS),
                     ],
                   ),
                 ),
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  SubmitButton _buildSubmitButton() {
+    return SubmitButton(
+      labelText: Strings.signInTitle,
+      onPressed: _signIn,
+    );
+  }
+
+  Center _buildLinkToSignUpScreen() {
+    return Center(
+      child: TextButton(
+        onPressed: _moveToSignUpScreen,
+        child: Text(
+          'アカウントをお持ちでない方はこちら',
+          style: Theme.of(context).textTheme.subtitle2,
         ),
       ),
     );

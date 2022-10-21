@@ -4,10 +4,10 @@ part 'user.freezed.dart';
 
 @freezed
 class AppUser with _$AppUser {
-  const factory AppUser(
-    String uid,
-    String userName,
-    DateTime birthDay,
-    String iconPath,
-  ) = _AppUser;
+  const factory AppUser({
+    required String uid,
+    required String userName,
+    required DateTime birthDay,
+    required String iconPath,
+  }) = _AppUser;
 }

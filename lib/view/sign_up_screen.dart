@@ -10,9 +10,11 @@ import 'package:mal_learn/component/vertical_spacer.dart';
 import 'package:mal_learn/constant/assets.dart';
 import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/strings.dart';
-import 'package:mal_learn/core/logger.dart';
+import 'package:mal_learn/model/error.dart';
 import 'package:mal_learn/provider/auth_provider.dart';
 import 'package:mal_learn/provider/user_profile_provider.dart';
+import 'package:mal_learn/view/home_screen.dart';
+import 'package:mal_learn/view/sign_in_screen.dart';
 
 class SignUpScreen extends ConsumerStatefulWidget {
   const SignUpScreen({super.key});
@@ -71,25 +73,49 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
         );
   }
 
+  void _initializeState() {
+    ref.read(authViewModelProvider.notifier).initializeState();
+    ref.read(userProfileViewModelProvider.notifier).initializeState();
+  }
+
+  void _moveToSignInScreen() {
+    _initializeState();
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<Scaffold>(
+        builder: (context) => const SignInScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return ref.watch(authViewModelProvider).maybeWhen(
           signUpSuccess: (User user) {
-            WidgetsBinding.instance
-                .addPostFrameCallback((_) => _registerProfile(user.uid));
-
             //TODO: ホーム画面に遷移
             return ref.watch(userProfileViewModelProvider).maybeWhen(
                   init: () {
                     WidgetsBinding.instance.addPostFrameCallback(
-                        (_) => _registerProfile(user.uid));
+                      (_) => _registerProfile(user.uid),
+                    );
                     return const OverlayLoadingPage();
                   },
-                  success: () => const Scaffold(
-                    body: Center(child: Text('Hello')),
-                  ),
+                  success: () {
+                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute<Scaffold>(
+                          builder: (context) => HomeScreen(user.uid),
+                        ),
+                      );
+                    });
+                    return const OverlayLoadingPage();
+                  },
                   orElse: () => const OverlayLoadingPage(),
                 );
+          },
+          failure: (AppError error) {
+            _initializeState();
+            //TODO: エラーテキストを表示
+            return _buildSignUpScreen();
           },
           orElse: _buildSignUpScreen,
         );
@@ -135,17 +161,35 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                       const VerticalSpacer(Dimens.paddingM),
                       _buildBirthDayField(),
                       const VerticalSpacer(Dimens.paddingM),
-                      SubmitButton(
-                        labelText: Strings.signUpTitle,
-                        onPressed: _signUp,
-                      ),
-                      const VerticalSpacer(Dimens.paddingM),
+                      _buildSubmitButton(),
+                      const VerticalSpacer(Dimens.paddingXS),
+                      _buildLinkToSignInScreen(),
+                      const VerticalSpacer(Dimens.paddingS),
                     ],
                   ),
                 ),
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  SubmitButton _buildSubmitButton() {
+    return SubmitButton(
+      labelText: Strings.signUpTitle,
+      onPressed: _signUp,
+    );
+  }
+
+  Center _buildLinkToSignInScreen() {
+    return Center(
+      child: TextButton(
+        onPressed: _moveToSignInScreen,
+        child: Text(
+          'アカウントをお持ちの方はこちら',
+          style: Theme.of(context).textTheme.subtitle2,
         ),
       ),
     );

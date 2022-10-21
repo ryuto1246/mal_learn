@@ -20,6 +20,10 @@ class App extends StatelessWidget {
                 fontSize: 16,
                 color: AppColors.accentColor,
               ),
+              subtitle2: const TextStyle(
+                decoration: TextDecoration.underline,
+                color: AppColors.black,
+              ),
               button: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,

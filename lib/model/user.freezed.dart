@@ -94,19 +94,19 @@ class __$$_AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
     Object? iconPath = freezed,
   }) {
     return _then(_$_AppUser(
-      uid == freezed
+      uid: uid == freezed
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String,
-      userName == freezed
+      userName: userName == freezed
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
               as String,
-      birthDay == freezed
+      birthDay: birthDay == freezed
           ? _value.birthDay
           : birthDay // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      iconPath == freezed
+      iconPath: iconPath == freezed
           ? _value.iconPath
           : iconPath // ignore: cast_nullable_to_non_nullable
               as String,
@@ -117,7 +117,11 @@ class __$$_AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_AppUser implements _AppUser {
-  const _$_AppUser(this.uid, this.userName, this.birthDay, this.iconPath);
+  const _$_AppUser(
+      {required this.uid,
+      required this.userName,
+      required this.birthDay,
+      required this.iconPath});
 
   @override
   final String uid;
@@ -159,8 +163,11 @@ class _$_AppUser implements _AppUser {
 }
 
 abstract class _AppUser implements AppUser {
-  const factory _AppUser(final String uid, final String userName,
-      final DateTime birthDay, final String iconPath) = _$_AppUser;
+  const factory _AppUser(
+      {required final String uid,
+      required final String userName,
+      required final DateTime birthDay,
+      required final String iconPath}) = _$_AppUser;
 
   @override
   String get uid;
