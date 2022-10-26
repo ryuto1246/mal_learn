@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/component/overlay_loading_page.dart';
 import 'package:mal_learn/constant/strings.dart';
-import 'package:mal_learn/core/logger.dart';
 import 'package:mal_learn/model/user.dart';
 import 'package:mal_learn/provider/user_profile_provider.dart';
 import 'package:mal_learn/view/chat_list_screen.dart';
@@ -49,7 +48,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget _buildHomeScreen(AppUser? appUser) {
     if (appUser == null) {
       //TODO: ログイン画面に遷移
-      return OverlayLoadingPage();
+      return const OverlayLoadingPage();
     }
 
     return Scaffold(

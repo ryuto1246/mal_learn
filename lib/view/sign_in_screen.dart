@@ -8,8 +8,8 @@ import 'package:mal_learn/component/vertical_spacer.dart';
 import 'package:mal_learn/constant/assets.dart';
 import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/strings.dart';
+import 'package:mal_learn/core/logger.dart';
 import 'package:mal_learn/provider/auth_provider.dart';
-import 'package:mal_learn/provider/user_profile_provider.dart';
 import 'package:mal_learn/view/home_screen.dart';
 import 'package:mal_learn/view/sign_up_screen.dart';
 
@@ -60,8 +60,10 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return ref.watch(authViewModelProvider).maybeWhen(
-          signUpSuccess: (User user) {
+          signInSuccess: (User user) {
+            logger.d('Moving to home screen. 1');
             WidgetsBinding.instance.addPostFrameCallback((_) {
+              logger.d('Moving to home screen. 2');
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute<Scaffold>(
                   builder: (context) => HomeScreen(user.uid),
@@ -70,6 +72,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
             });
             return const OverlayLoadingPage();
           },
+          loading: () => const OverlayLoadingPage(),
           orElse: _buildSignInScreen,
         );
   }

@@ -26,8 +26,8 @@ class _BackgroundClipper extends CustomClipper<Path> {
     final path = Path()
       ..lineTo(w, 0)
       ..lineTo(w, h - 45)
-      ..quadraticBezierTo(w - 60, h - 10, w / 2, h)
-      ..quadraticBezierTo(60, h - 10, 0, h - 45);
+      ..quadraticBezierTo(w - 80, h, w / 2, h)
+      ..quadraticBezierTo(80, h, 0, h - 45);
 
     return path;
   }
