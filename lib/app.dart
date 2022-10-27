@@ -12,6 +12,10 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: AppMaterialColor.primary,
         textTheme: Theme.of(context).textTheme.copyWith(
+              headline1: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+              ),
               headline2: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
