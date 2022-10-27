@@ -36,6 +36,7 @@ final userProfileProvider =
     final data = user.data() as Map<String, dynamic>;
     return AppUser(
       uid: uid,
+      id: data['id'],
       userName: data['userName'],
       birthDay: (data['birthDay'] as Timestamp).toDate(),
       iconPath: '',

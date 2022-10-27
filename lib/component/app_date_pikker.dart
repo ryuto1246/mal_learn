@@ -25,7 +25,11 @@ class _AppDatePickerState extends State<AppDatePicker> {
   late final _initialValue = widget.initialValue;
   late final _onChanged = widget.onChanged;
 
-  final _controller = TextEditingController();
+  late final _controller = TextEditingController(
+    text: _initialValue != null
+        ? DateFormat('yyyy年MM月d日').format(_initialValue!)
+        : null,
+  );
 
   bool _isShowingDatePicker = false;
 
@@ -40,9 +44,6 @@ class _AppDatePickerState extends State<AppDatePicker> {
       child: TextFormField(
         readOnly: true,
         controller: _controller,
-        initialValue: _initialValue != null
-            ? DateFormat('yyyy年MM月d日').format(_initialValue!)
-            : null,
         decoration: InputDecoration(
           labelText: _label,
           labelStyle: Theme.of(context).textTheme.subtitle1,

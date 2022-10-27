@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$AppUser {
   String get uid => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get userName => throw _privateConstructorUsedError;
   DateTime get birthDay => throw _privateConstructorUsedError;
   String get iconPath => throw _privateConstructorUsedError;
@@ -29,7 +30,12 @@ mixin _$AppUser {
 abstract class $AppUserCopyWith<$Res> {
   factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) =
       _$AppUserCopyWithImpl<$Res>;
-  $Res call({String uid, String userName, DateTime birthDay, String iconPath});
+  $Res call(
+      {String uid,
+      String id,
+      String userName,
+      DateTime birthDay,
+      String iconPath});
 }
 
 /// @nodoc
@@ -43,6 +49,7 @@ class _$AppUserCopyWithImpl<$Res> implements $AppUserCopyWith<$Res> {
   @override
   $Res call({
     Object? uid = freezed,
+    Object? id = freezed,
     Object? userName = freezed,
     Object? birthDay = freezed,
     Object? iconPath = freezed,
@@ -51,6 +58,10 @@ class _$AppUserCopyWithImpl<$Res> implements $AppUserCopyWith<$Res> {
       uid: uid == freezed
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
       userName: userName == freezed
           ? _value.userName
@@ -74,7 +85,12 @@ abstract class _$$_AppUserCopyWith<$Res> implements $AppUserCopyWith<$Res> {
           _$_AppUser value, $Res Function(_$_AppUser) then) =
       __$$_AppUserCopyWithImpl<$Res>;
   @override
-  $Res call({String uid, String userName, DateTime birthDay, String iconPath});
+  $Res call(
+      {String uid,
+      String id,
+      String userName,
+      DateTime birthDay,
+      String iconPath});
 }
 
 /// @nodoc
@@ -89,6 +105,7 @@ class __$$_AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
   @override
   $Res call({
     Object? uid = freezed,
+    Object? id = freezed,
     Object? userName = freezed,
     Object? birthDay = freezed,
     Object? iconPath = freezed,
@@ -97,6 +114,10 @@ class __$$_AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
       uid: uid == freezed
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
       userName: userName == freezed
           ? _value.userName
@@ -119,12 +140,15 @@ class __$$_AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
 class _$_AppUser implements _AppUser {
   const _$_AppUser(
       {required this.uid,
+      required this.id,
       required this.userName,
       required this.birthDay,
       required this.iconPath});
 
   @override
   final String uid;
+  @override
+  final String id;
   @override
   final String userName;
   @override
@@ -134,7 +158,7 @@ class _$_AppUser implements _AppUser {
 
   @override
   String toString() {
-    return 'AppUser(uid: $uid, userName: $userName, birthDay: $birthDay, iconPath: $iconPath)';
+    return 'AppUser(uid: $uid, id: $id, userName: $userName, birthDay: $birthDay, iconPath: $iconPath)';
   }
 
   @override
@@ -143,6 +167,7 @@ class _$_AppUser implements _AppUser {
         (other.runtimeType == runtimeType &&
             other is _$_AppUser &&
             const DeepCollectionEquality().equals(other.uid, uid) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.userName, userName) &&
             const DeepCollectionEquality().equals(other.birthDay, birthDay) &&
             const DeepCollectionEquality().equals(other.iconPath, iconPath));
@@ -152,6 +177,7 @@ class _$_AppUser implements _AppUser {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(uid),
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(userName),
       const DeepCollectionEquality().hash(birthDay),
       const DeepCollectionEquality().hash(iconPath));
@@ -165,12 +191,15 @@ class _$_AppUser implements _AppUser {
 abstract class _AppUser implements AppUser {
   const factory _AppUser(
       {required final String uid,
+      required final String id,
       required final String userName,
       required final DateTime birthDay,
       required final String iconPath}) = _$_AppUser;
 
   @override
   String get uid;
+  @override
+  String get id;
   @override
   String get userName;
   @override

@@ -6,6 +6,7 @@ import 'package:mal_learn/model/user.dart';
 import 'package:mal_learn/provider/user_profile_provider.dart';
 import 'package:mal_learn/view/chat_list_screen.dart';
 import 'package:mal_learn/view/profile_screen.dart';
+import 'package:mal_learn/view/sign_in_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen(
@@ -35,6 +36,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
+  void _moveToSignInScreen() {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<Scaffold>(
+        builder: (context) => const SignInScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return ref.watch(userProfileProvider(widget.uid)).when(
@@ -47,7 +56,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   Widget _buildHomeScreen(AppUser? appUser) {
     if (appUser == null) {
-      //TODO: ログイン画面に遷移
+      _moveToSignInScreen();
       return const OverlayLoadingPage();
     }
 

@@ -3,6 +3,7 @@ import 'package:mal_learn/core/logger.dart';
 import 'package:mal_learn/model/error.dart';
 import 'package:mal_learn/model/result.dart';
 import 'package:mal_learn/model/user.dart';
+import 'package:mal_learn/ui_core/generate_id.dart';
 
 abstract class UserProfileRepository {
   Future<Result<AppUser>> registerProfile(
@@ -24,7 +25,11 @@ class UserProfileRepositoryImpliment extends UserProfileRepository {
     required String iconPath,
   }) async {
     try {
+      //TODO: Idの重複チェック
+      final id = generateId(8);
+
       await firestore.collection('users').doc(uid).set({
+        'id': id,
         'userName': userName,
         'birthDay': Timestamp.fromDate(birthDay),
         'iconPath': iconPath
@@ -34,6 +39,7 @@ class UserProfileRepositoryImpliment extends UserProfileRepository {
       return Result.success(
         AppUser(
           uid: uid,
+          id: id,
           userName: userName,
           birthDay: birthDay,
           iconPath: iconPath,

@@ -91,7 +91,6 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
   Widget build(BuildContext context) {
     return ref.watch(authViewModelProvider).maybeWhen(
           signUpSuccess: (User user) {
-            //TODO: ホーム画面に遷移
             return ref.watch(userProfileViewModelProvider).maybeWhen(
                   init: () {
                     WidgetsBinding.instance.addPostFrameCallback(
@@ -112,9 +111,11 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                   orElse: () => const OverlayLoadingPage(),
                 );
           },
+          loading: () => const OverlayLoadingPage(),
           failure: (AppError error) {
-            _initializeState();
-            //TODO: エラーテキストを表示
+            WidgetsBinding.instance.addPostFrameCallback(
+              (_) => _initializeState(),
+            );
             return _buildSignUpScreen();
           },
           orElse: _buildSignUpScreen,
@@ -200,7 +201,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
       label: Strings.userNameFieldTitle,
       validators: const [],
       onChanged: _setUserName,
-      initialValue: _email,
+      initialValue: _userName,
     );
   }
 
@@ -226,6 +227,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
   AppDatePicker _buildBirthDayField() {
     return AppDatePicker(
       label: Strings.birthDayFieldTitle,
+      initialValue: _birthDay,
       onChanged: _setBirthDay,
     );
   }

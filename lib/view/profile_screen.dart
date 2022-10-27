@@ -45,7 +45,7 @@ class ProfileScreen extends StatelessWidget {
         ),
         Text(
           //TODO: idを取得
-          'id',
+          appUser.id,
           style: TextStyle(
             fontSize: 12,
             color: Colors.teal.shade300,

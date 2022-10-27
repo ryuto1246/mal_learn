@@ -6,6 +6,7 @@ part 'user.freezed.dart';
 class AppUser with _$AppUser {
   const factory AppUser({
     required String uid,
+    required String id,
     required String userName,
     required DateTime birthDay,
     required String iconPath,
