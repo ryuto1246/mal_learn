@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mal_learn/component/circle_button.dart';
 import 'package:mal_learn/constant/colors.dart';
 import 'package:mal_learn/constant/dimens.dart';
 
@@ -30,28 +31,13 @@ class ChatListScreen extends StatelessWidget {
       actions: [
         Padding(
           padding: const EdgeInsets.only(right: Dimens.paddingL),
-          child: _buildCreateChatRoomButton(context),
+          child: CircleButton(
+            icon: Icons.add,
+            color: Theme.of(context).primaryColor,
+            onPressed: () {},
+          ),
         ),
       ],
-    );
-  }
-
-  SizedBox _buildCreateChatRoomButton(BuildContext context) {
-    return SizedBox(
-      width: Dimens.appbarButtonSize,
-      height: Dimens.appbarButtonSize,
-      child: OutlinedButton(
-        onPressed: () {},
-        style: OutlinedButton.styleFrom(
-          shape: const CircleBorder(),
-          side: BorderSide(
-            color: Theme.of(context).primaryColor,
-            width: Dimens.appbarButtonWidth,
-          ),
-          padding: EdgeInsets.zero,
-        ),
-        child: Icon(Icons.add, color: Theme.of(context).primaryColor),
-      ),
     );
   }
 }
