@@ -27,6 +27,7 @@ dev_dependencies:
   pedantic_mono: any
   build_runner: ^2.2.1
   freezed: ^2.1.1
+  json_serializable:
 
 flutter:
   uses-material-design: true

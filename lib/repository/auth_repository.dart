@@ -5,8 +5,13 @@ import 'package:mal_learn/model/result.dart';
 import 'package:mal_learn/core/to_app_error_extention.dart';
 
 abstract class AuthRepository {
-  Future<Result<User>> signUp(FirebaseAuth auth, String email, String password,
-      DateTime birthDay, String userName);
+  Future<Result<User>> signUp(
+    FirebaseAuth auth,
+    String email,
+    String password,
+    DateTime birthDay,
+    String userName,
+  );
 
   Future<Result<User>> signIn(
     FirebaseAuth auth,

@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'userprofileuistate.freezed.dart';
+part 'user_profile_ui_state.freezed.dart';
 
 @freezed
 class UserProfileUiState with _$UserProfileUiState {

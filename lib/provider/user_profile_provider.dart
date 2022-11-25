@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/core/logger.dart';
-import 'package:mal_learn/model/ui/userprofileuistate.dart';
+import 'package:mal_learn/model/ui/user_profile_ui_state.dart';
 import 'package:mal_learn/model/user.dart';
 import 'package:mal_learn/repository/user_profile_repository.dart';
 import 'package:mal_learn/view_model/user_profile_view_model.dart';
@@ -18,12 +18,12 @@ final userProfileViewModelProvider =
 
 final userDocProvider =
     StreamProvider.autoDispose.family<DocumentSnapshot, String>(
-  (_, uid) =>
-      FirebaseFirestore.instance.collection('users').doc(uid).snapshots(),
+  (_, uid) {
+    return FirebaseFirestore.instance.collection('users').doc(uid).snapshots();
+  },
 );
 
-final userProfileProvider =
-    FutureProvider.autoDispose.family<AppUser?, String>(
+final userProfileProvider = FutureProvider.autoDispose.family<AppUser?, String>(
   (ref, uid) async {
     final user = await ref.watch(userDocProvider(uid).future);
     logger.d('Fetch user by uid: $uid');

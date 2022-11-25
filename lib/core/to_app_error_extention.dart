@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mal_learn/model/error.dart';
 
-extension ToAppErrorExtention on FirebaseAuthException {
+extension FirebaseAuthExceptionToAppError on FirebaseAuthException {
   AppError toAppError() {
     const appErrors = {
       'email-already-in-use': AppError.emailAlreadyInUse(),
@@ -12,6 +12,17 @@ extension ToAppErrorExtention on FirebaseAuthException {
       'user-not-found': AppError.userNotFound(),
       'wrong-password': AppError.wrongPassword(),
       'weak-password': AppError.weakPassword(),
+    };
+    const defaultError = AppError.undefined();
+    return appErrors[code] ?? defaultError;
+  }
+}
+
+extension FirebaseExceptionToAppError on FirebaseException {
+  AppError toAppError() {
+    const appErrors = {
+      //TODO: エラーを書く
+      'email-already-in-use': AppError.emailAlreadyInUse(),
     };
     const defaultError = AppError.undefined();
     return appErrors[code] ?? defaultError;

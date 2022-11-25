@@ -30,6 +30,7 @@ mixin _$AppError {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,6 +47,7 @@ mixin _$AppError {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,6 +64,7 @@ mixin _$AppError {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -79,6 +82,7 @@ mixin _$AppError {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +99,7 @@ mixin _$AppError {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +116,7 @@ mixin _$AppError {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -184,6 +190,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return emailAlreadyInUse();
   }
@@ -203,6 +210,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -222,6 +230,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -245,6 +254,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -264,6 +274,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -283,6 +294,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -348,6 +360,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return invalidEmail();
   }
@@ -367,6 +380,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return invalidEmail?.call();
   }
@@ -386,6 +400,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -409,6 +424,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return invalidEmail(this);
   }
@@ -428,6 +444,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return invalidEmail?.call(this);
   }
@@ -447,6 +464,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -513,6 +531,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return operationNotAllowed();
   }
@@ -532,6 +551,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return operationNotAllowed?.call();
   }
@@ -551,6 +571,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -574,6 +595,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return operationNotAllowed(this);
   }
@@ -593,6 +615,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -612,6 +635,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -678,6 +702,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return requiresRecentLogin();
   }
@@ -697,6 +722,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return requiresRecentLogin?.call();
   }
@@ -716,6 +742,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (requiresRecentLogin != null) {
@@ -739,6 +766,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return requiresRecentLogin(this);
   }
@@ -758,6 +786,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return requiresRecentLogin?.call(this);
   }
@@ -777,6 +806,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (requiresRecentLogin != null) {
@@ -842,6 +872,7 @@ class _$_UserDisabled implements _UserDisabled {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return userDisabled();
   }
@@ -861,6 +892,7 @@ class _$_UserDisabled implements _UserDisabled {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return userDisabled?.call();
   }
@@ -880,6 +912,7 @@ class _$_UserDisabled implements _UserDisabled {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -903,6 +936,7 @@ class _$_UserDisabled implements _UserDisabled {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return userDisabled(this);
   }
@@ -922,6 +956,7 @@ class _$_UserDisabled implements _UserDisabled {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return userDisabled?.call(this);
   }
@@ -941,6 +976,7 @@ class _$_UserDisabled implements _UserDisabled {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -1006,6 +1042,7 @@ class _$_UserNotFound implements _UserNotFound {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return userNotFound();
   }
@@ -1025,6 +1062,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return userNotFound?.call();
   }
@@ -1044,6 +1082,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1067,6 +1106,7 @@ class _$_UserNotFound implements _UserNotFound {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return userNotFound(this);
   }
@@ -1086,6 +1126,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return userNotFound?.call(this);
   }
@@ -1105,6 +1146,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1170,6 +1212,7 @@ class _$_WeakPassword implements _WeakPassword {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return weakPassword();
   }
@@ -1189,6 +1232,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return weakPassword?.call();
   }
@@ -1208,6 +1252,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1231,6 +1276,7 @@ class _$_WeakPassword implements _WeakPassword {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return weakPassword(this);
   }
@@ -1250,6 +1296,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return weakPassword?.call(this);
   }
@@ -1269,6 +1316,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1334,6 +1382,7 @@ class _$_WrongPassword implements _WrongPassword {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return wrongPassword();
   }
@@ -1353,6 +1402,7 @@ class _$_WrongPassword implements _WrongPassword {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return wrongPassword?.call();
   }
@@ -1372,6 +1422,7 @@ class _$_WrongPassword implements _WrongPassword {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -1395,6 +1446,7 @@ class _$_WrongPassword implements _WrongPassword {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return wrongPassword(this);
   }
@@ -1414,6 +1466,7 @@ class _$_WrongPassword implements _WrongPassword {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return wrongPassword?.call(this);
   }
@@ -1433,6 +1486,7 @@ class _$_WrongPassword implements _WrongPassword {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -1498,6 +1552,7 @@ class _$_Undefined implements _Undefined {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return undefined();
   }
@@ -1517,6 +1572,7 @@ class _$_Undefined implements _Undefined {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return undefined?.call();
   }
@@ -1536,6 +1592,7 @@ class _$_Undefined implements _Undefined {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (undefined != null) {
@@ -1559,6 +1616,7 @@ class _$_Undefined implements _Undefined {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return undefined(this);
   }
@@ -1578,6 +1636,7 @@ class _$_Undefined implements _Undefined {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return undefined?.call(this);
   }
@@ -1597,6 +1656,7 @@ class _$_Undefined implements _Undefined {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (undefined != null) {
@@ -1663,6 +1723,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return noInternetConnection();
   }
@@ -1682,6 +1743,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return noInternetConnection?.call();
   }
@@ -1701,6 +1763,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (noInternetConnection != null) {
@@ -1724,6 +1787,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return noInternetConnection(this);
   }
@@ -1743,6 +1807,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return noInternetConnection?.call(this);
   }
@@ -1762,6 +1827,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (noInternetConnection != null) {
@@ -1827,6 +1893,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return errorOccurred();
   }
@@ -1846,6 +1913,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return errorOccurred?.call();
   }
@@ -1865,6 +1933,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (errorOccurred != null) {
@@ -1888,6 +1957,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return errorOccurred(this);
   }
@@ -1907,6 +1977,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return errorOccurred?.call(this);
   }
@@ -1926,6 +1997,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (errorOccurred != null) {
@@ -1992,6 +2064,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     required TResult Function() noInternetConnection,
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
   }) {
     return registerProfileError();
   }
@@ -2011,6 +2084,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
   }) {
     return registerProfileError?.call();
   }
@@ -2030,6 +2104,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     TResult Function()? noInternetConnection,
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (registerProfileError != null) {
@@ -2053,6 +2128,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     required TResult Function(_NoInternetConnection value) noInternetConnection,
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
   }) {
     return registerProfileError(this);
   }
@@ -2072,6 +2148,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
   }) {
     return registerProfileError?.call(this);
   }
@@ -2091,6 +2168,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     TResult Function(_NoInternetConnection value)? noInternetConnection,
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
     required TResult orElse(),
   }) {
     if (registerProfileError != null) {
@@ -2102,4 +2180,175 @@ class _$_RegisterProfileError implements _RegisterProfileError {
 
 abstract class _RegisterProfileError implements AppError {
   const factory _RegisterProfileError() = _$_RegisterProfileError;
+}
+
+/// @nodoc
+abstract class _$$_FetchChatRoomErrorCopyWith<$Res> {
+  factory _$$_FetchChatRoomErrorCopyWith(_$_FetchChatRoomError value,
+          $Res Function(_$_FetchChatRoomError) then) =
+      __$$_FetchChatRoomErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_FetchChatRoomErrorCopyWithImpl<$Res>
+    extends _$AppErrorCopyWithImpl<$Res>
+    implements _$$_FetchChatRoomErrorCopyWith<$Res> {
+  __$$_FetchChatRoomErrorCopyWithImpl(
+      _$_FetchChatRoomError _value, $Res Function(_$_FetchChatRoomError) _then)
+      : super(_value, (v) => _then(v as _$_FetchChatRoomError));
+
+  @override
+  _$_FetchChatRoomError get _value => super._value as _$_FetchChatRoomError;
+}
+
+/// @nodoc
+
+class _$_FetchChatRoomError implements _FetchChatRoomError {
+  const _$_FetchChatRoomError();
+
+  @override
+  String toString() {
+    return 'AppError.fetchChatRoomError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_FetchChatRoomError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() requiresRecentLogin,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() weakPassword,
+    required TResult Function() wrongPassword,
+    required TResult Function() undefined,
+    required TResult Function() noInternetConnection,
+    required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
+  }) {
+    return fetchChatRoomError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? requiresRecentLogin,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? wrongPassword,
+    TResult Function()? undefined,
+    TResult Function()? noInternetConnection,
+    TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
+  }) {
+    return fetchChatRoomError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? requiresRecentLogin,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? wrongPassword,
+    TResult Function()? undefined,
+    TResult Function()? noInternetConnection,
+    TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
+    required TResult orElse(),
+  }) {
+    if (fetchChatRoomError != null) {
+      return fetchChatRoomError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_EmailAleadyInUse value) emailAlreadyInUse,
+    required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_RequiresRecentLogin value) requiresRecentLogin,
+    required TResult Function(_UserDisabled value) userDisabled,
+    required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_WeakPassword value) weakPassword,
+    required TResult Function(_WrongPassword value) wrongPassword,
+    required TResult Function(_Undefined value) undefined,
+    required TResult Function(_NoInternetConnection value) noInternetConnection,
+    required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+  }) {
+    return fetchChatRoomError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_EmailAleadyInUse value)? emailAlreadyInUse,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_RequiresRecentLogin value)? requiresRecentLogin,
+    TResult Function(_UserDisabled value)? userDisabled,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_Undefined value)? undefined,
+    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+  }) {
+    return fetchChatRoomError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_EmailAleadyInUse value)? emailAlreadyInUse,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_RequiresRecentLogin value)? requiresRecentLogin,
+    TResult Function(_UserDisabled value)? userDisabled,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_Undefined value)? undefined,
+    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    required TResult orElse(),
+  }) {
+    if (fetchChatRoomError != null) {
+      return fetchChatRoomError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchChatRoomError implements AppError {
+  const factory _FetchChatRoomError() = _$_FetchChatRoomError;
 }

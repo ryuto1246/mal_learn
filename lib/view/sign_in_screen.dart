@@ -61,9 +61,8 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
   Widget build(BuildContext context) {
     return ref.watch(authViewModelProvider).maybeWhen(
           signInSuccess: (User user) {
-            logger.d('Moving to home screen. 1');
             WidgetsBinding.instance.addPostFrameCallback((_) {
-              logger.d('Moving to home screen. 2');
+              logger.d('Moving to home screen.');
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute<Scaffold>(
                   builder: (context) => HomeScreen(user.uid),

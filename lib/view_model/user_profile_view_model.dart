@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/model/error.dart';
-import 'package:mal_learn/model/ui/userprofileuistate.dart';
+import 'package:mal_learn/model/ui/user_profile_ui_state.dart';
 import 'package:mal_learn/model/user.dart';
 import 'package:mal_learn/repository/user_profile_repository.dart';
 

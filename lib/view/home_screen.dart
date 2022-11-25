@@ -66,7 +66,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         onPageChanged: _setIndex,
         children: [
           ProfileScreen(appUser),
-          const ChatListScreen(),
+          ChatListScreen(appUser),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
