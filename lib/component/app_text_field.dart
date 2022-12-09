@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mal_learn/constant/colors.dart';
 import 'package:mal_learn/constant/dimens.dart';
+import 'package:mal_learn/constant/test_style.dart';
 import 'package:mal_learn/ui_core/validator/validator.dart';
 
 class AppTextField extends StatefulWidget {
@@ -50,7 +51,7 @@ class _AppTextFieldState extends State<AppTextField> {
         style: const TextStyle(color: AppColors.black),
         decoration: InputDecoration(
           labelText: _label,
-          labelStyle: Theme.of(context).textTheme.subtitle1,
+          labelStyle: AppTextStyle.label.large.accentColor,
           contentPadding: const EdgeInsets.only(bottom: Dimens.paddingXS),
           suffixIcon: _isPasswordTextField
               ? IconButton(

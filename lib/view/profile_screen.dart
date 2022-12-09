@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mal_learn/component/clipped_background_image.dart';
 import 'package:mal_learn/component/user_icon.dart';
+import 'package:mal_learn/constant/assets.dart';
 import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/model/user.dart';
 
@@ -58,7 +59,7 @@ class ProfileScreen extends StatelessWidget {
     return const Positioned(
       top: 160,
       child: UserIcon(
-        image: AssetImage('assets/images/default_icon.png'),
+        image: AssetImage(AssetList.defaultIcon),
       ),
     );
   }
@@ -69,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
       left: 0,
       right: 0,
       child: ClippedBackgroundImage(
-        AssetImage('assets/images/default_background.jpeg'),
+        AssetImage(AssetList.defaultUserBackground),
       ),
     );
   }

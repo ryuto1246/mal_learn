@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/component/circle_button.dart';
+import 'package:mal_learn/constant/assets.dart';
 import 'package:mal_learn/constant/colors.dart';
 import 'package:mal_learn/constant/dimens.dart';
+import 'package:mal_learn/constant/test_style.dart';
+import 'package:mal_learn/model/chat_room_summary.dart';
 import 'package:mal_learn/model/user.dart';
 import 'package:mal_learn/provider/chat_room_list_provider.dart';
 
@@ -29,15 +32,33 @@ class ChatListScreen extends ConsumerWidget {
               return ListView.builder(
                 itemCount: roomSummaryList.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    
-                  );
-                  return Text(roomSummaryList[index].name ?? '[NO NAME]');
+                  return _buildListTile(context, roomSummaryList, index);
                 },
               );
             },
             orElse: () => const Center(child: CircularProgressIndicator()),
           ),
+    );
+  }
+
+  ListTile _buildListTile(
+    BuildContext context,
+    List<ChatRoomSummary> roomSummaryList,
+    int index,
+  ) {
+    return ListTile(
+      title: Text(
+        roomSummaryList[index].name ?? '[NO NAME]',
+        style: AppTextStyle.title.bold,
+      ),
+      subtitle: const Text('最後のメッセージ'),
+      trailing: Padding(
+        padding: const EdgeInsets.only(right: Dimens.paddingXS),
+        child: Text('0:00', style: AppTextStyle.label.small.accentColor),
+      ),
+      leading: ClipOval(child: Image.asset(AssetList.defaultIcon)),
+      contentPadding: const EdgeInsets.symmetric(horizontal: Dimens.paddingM),
+      onTap: () {},
     );
   }
 
@@ -48,10 +69,7 @@ class ChatListScreen extends ConsumerWidget {
           horizontal: Dimens.paddingM,
           vertical: Dimens.paddingS,
         ),
-        child: Text(
-          'チャット',
-          style: Theme.of(context).textTheme.headline1,
-        ),
+        child: Text('チャット', style: AppTextStyle.headline.bold),
       ),
       backgroundColor: AppColors.white,
       elevation: 0,

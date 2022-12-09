@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mal_learn/constant/colors.dart';
 import 'package:mal_learn/constant/dimens.dart';
+import 'package:mal_learn/constant/test_style.dart';
 
 class SubmitButton extends StatelessWidget {
   const SubmitButton({required this.labelText, this.onPressed, super.key});
@@ -16,7 +17,8 @@ class SubmitButton extends StatelessWidget {
         shape: const StadiumBorder(),
         height: Dimens.buttonHeight,
         onPressed: onPressed ?? () {},
-        child: Text(labelText, style: Theme.of(context).textTheme.button),
+        textTheme: ButtonTextTheme.primary,
+        child: Text(labelText, style: AppTextStyle.title.bold.white),
       ),
     );
   }

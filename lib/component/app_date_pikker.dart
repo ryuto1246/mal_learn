@@ -3,6 +3,7 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:mal_learn/constant/colors.dart';
 import 'package:mal_learn/constant/dimens.dart';
+import 'package:mal_learn/constant/test_style.dart';
 
 class AppDatePicker extends StatefulWidget {
   const AppDatePicker({
@@ -46,7 +47,7 @@ class _AppDatePickerState extends State<AppDatePicker> {
         controller: _controller,
         decoration: InputDecoration(
           labelText: _label,
-          labelStyle: Theme.of(context).textTheme.subtitle1,
+          labelStyle: AppTextStyle.label.large.accentColor,
           contentPadding: const EdgeInsets.only(bottom: Dimens.paddingXS),
         ),
         style: const TextStyle(color: AppColors.black),

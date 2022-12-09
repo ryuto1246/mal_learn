@@ -3,7 +3,8 @@ class Dimens {
   static const paddingL = 32.0;
   static const paddingM = 24.0;
   static const paddingS = 12.0;
-  static const paddingXS = 4.0;
+  static const paddingXS = 8.0;
+  static const paddingXXS = 2.0;
 
   //height, width
   static const buttonHeight = 45.0;

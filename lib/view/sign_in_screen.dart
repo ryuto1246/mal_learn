@@ -8,6 +8,7 @@ import 'package:mal_learn/component/vertical_spacer.dart';
 import 'package:mal_learn/constant/assets.dart';
 import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/strings.dart';
+import 'package:mal_learn/constant/test_style.dart';
 import 'package:mal_learn/core/logger.dart';
 import 'package:mal_learn/provider/auth_provider.dart';
 import 'package:mal_learn/view/home_screen.dart';
@@ -105,7 +106,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                       const VerticalSpacer(Dimens.paddingM),
                       Text(
                         Strings.signInTitle,
-                        style: Theme.of(context).textTheme.headline2,
+                        style: AppTextStyle.headline.bold,
                       ),
                       const VerticalSpacer(Dimens.paddingS),
                       _buildEmailField(),
@@ -140,7 +141,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
         onPressed: _moveToSignUpScreen,
         child: Text(
           'アカウントをお持ちでない方はこちら',
-          style: Theme.of(context).textTheme.subtitle2,
+          style: AppTextStyle.body.underline,
         ),
       ),
     );

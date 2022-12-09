@@ -10,6 +10,7 @@ import 'package:mal_learn/component/vertical_spacer.dart';
 import 'package:mal_learn/constant/assets.dart';
 import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/strings.dart';
+import 'package:mal_learn/constant/test_style.dart';
 import 'package:mal_learn/model/error.dart';
 import 'package:mal_learn/provider/auth_provider.dart';
 import 'package:mal_learn/provider/user_profile_provider.dart';
@@ -151,7 +152,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                       const VerticalSpacer(Dimens.paddingM),
                       Text(
                         Strings.signUpTitle,
-                        style: Theme.of(context).textTheme.headline2,
+                        style: AppTextStyle.headline.bold,
                       ),
                       const VerticalSpacer(Dimens.paddingS),
                       _buildUserNameField(),
