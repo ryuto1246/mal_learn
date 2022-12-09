@@ -22,6 +22,7 @@ class ChatRoomListRepositoryImpliment extends ChatRoomListRepository {
       final chatRoomList = snapshot.docs.map((doc) {
         final data = doc.data();
         return ChatRoomSummary(
+          id: doc.reference.id,
           name: data['name'] as String?,
           lastMessageAt: (data['lastMessageAt'] as Timestamp?)?.toDate(),
           iconPath: data['iconPath'] as String?,
@@ -34,7 +35,7 @@ class ChatRoomListRepositoryImpliment extends ChatRoomListRepository {
       return Result.success(chatRoomList);
     } on Exception catch (e) {
       logger.e('failed to fetch chat room list: $e');
-      return Result.failure(AppError.fetchChatRoomError());
+      return Result.failure(const AppError.fetchChatRoomError());
     }
   }
 }

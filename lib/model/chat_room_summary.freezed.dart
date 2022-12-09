@@ -16,6 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ChatRoomSummary {
+  String get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   DateTime? get lastMessageAt => throw _privateConstructorUsedError;
   String? get iconPath => throw _privateConstructorUsedError;
@@ -35,7 +36,8 @@ abstract class $ChatRoomSummaryCopyWith<$Res> {
           ChatRoomSummary value, $Res Function(ChatRoomSummary) then) =
       _$ChatRoomSummaryCopyWithImpl<$Res>;
   $Res call(
-      {String? name,
+      {String id,
+      String? name,
       DateTime? lastMessageAt,
       String? iconPath,
       ChatType chatType,
@@ -54,6 +56,7 @@ class _$ChatRoomSummaryCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? name = freezed,
     Object? lastMessageAt = freezed,
     Object? iconPath = freezed,
@@ -62,6 +65,10 @@ class _$ChatRoomSummaryCopyWithImpl<$Res>
     Object? reference = freezed,
   }) {
     return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -98,7 +105,8 @@ abstract class _$$_ChatRoomSummaryCopyWith<$Res>
       __$$_ChatRoomSummaryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? name,
+      {String id,
+      String? name,
       DateTime? lastMessageAt,
       String? iconPath,
       ChatType chatType,
@@ -119,6 +127,7 @@ class __$$_ChatRoomSummaryCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? name = freezed,
     Object? lastMessageAt = freezed,
     Object? iconPath = freezed,
@@ -127,6 +136,10 @@ class __$$_ChatRoomSummaryCopyWithImpl<$Res>
     Object? reference = freezed,
   }) {
     return _then(_$_ChatRoomSummary(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -159,7 +172,8 @@ class __$$_ChatRoomSummaryCopyWithImpl<$Res>
 
 class _$_ChatRoomSummary implements _ChatRoomSummary {
   const _$_ChatRoomSummary(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.lastMessageAt,
       required this.iconPath,
       required this.chatType,
@@ -167,6 +181,8 @@ class _$_ChatRoomSummary implements _ChatRoomSummary {
       required this.reference})
       : _members = members;
 
+  @override
+  final String id;
   @override
   final String? name;
   @override
@@ -187,7 +203,7 @@ class _$_ChatRoomSummary implements _ChatRoomSummary {
 
   @override
   String toString() {
-    return 'ChatRoomSummary(name: $name, lastMessageAt: $lastMessageAt, iconPath: $iconPath, chatType: $chatType, members: $members, reference: $reference)';
+    return 'ChatRoomSummary(id: $id, name: $name, lastMessageAt: $lastMessageAt, iconPath: $iconPath, chatType: $chatType, members: $members, reference: $reference)';
   }
 
   @override
@@ -195,6 +211,7 @@ class _$_ChatRoomSummary implements _ChatRoomSummary {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChatRoomSummary &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.lastMessageAt, lastMessageAt) &&
@@ -207,6 +224,7 @@ class _$_ChatRoomSummary implements _ChatRoomSummary {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(lastMessageAt),
       const DeepCollectionEquality().hash(iconPath),
@@ -222,7 +240,8 @@ class _$_ChatRoomSummary implements _ChatRoomSummary {
 
 abstract class _ChatRoomSummary implements ChatRoomSummary {
   const factory _ChatRoomSummary(
-          {required final String? name,
+          {required final String id,
+          required final String? name,
           required final DateTime? lastMessageAt,
           required final String? iconPath,
           required final ChatType chatType,
@@ -230,6 +249,8 @@ abstract class _ChatRoomSummary implements ChatRoomSummary {
           required final DocumentReference<Object?> reference}) =
       _$_ChatRoomSummary;
 
+  @override
+  String get id;
   @override
   String? get name;
   @override

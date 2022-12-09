@@ -7,7 +7,9 @@ import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/test_style.dart';
 import 'package:mal_learn/model/chat_room_summary.dart';
 import 'package:mal_learn/model/user.dart';
+import 'package:mal_learn/provider/chat_provider.dart';
 import 'package:mal_learn/provider/chat_room_list_provider.dart';
+import 'package:mal_learn/view/chat_room_screen.dart';
 
 class ChatListScreen extends ConsumerWidget {
   const ChatListScreen(this.appUser, {super.key});
@@ -32,7 +34,7 @@ class ChatListScreen extends ConsumerWidget {
               return ListView.builder(
                 itemCount: roomSummaryList.length,
                 itemBuilder: (context, index) {
-                  return _buildListTile(context, roomSummaryList, index);
+                  return _buildListTile(context, ref, roomSummaryList, index);
                 },
               );
             },
@@ -43,6 +45,7 @@ class ChatListScreen extends ConsumerWidget {
 
   ListTile _buildListTile(
     BuildContext context,
+    WidgetRef ref,
     List<ChatRoomSummary> roomSummaryList,
     int index,
   ) {
@@ -58,7 +61,16 @@ class ChatListScreen extends ConsumerWidget {
       ),
       leading: ClipOval(child: Image.asset(AssetList.defaultIcon)),
       contentPadding: const EdgeInsets.symmetric(horizontal: Dimens.paddingM),
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute<Scaffold>(
+            builder: (context) {
+              final id = roomSummaryList[index].id;
+              return ChatRoomScreen(id);
+            },
+          ),
+        );
+      },
     );
   }
 

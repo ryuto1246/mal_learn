@@ -31,6 +31,7 @@ mixin _$AppError {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +49,7 @@ mixin _$AppError {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +67,7 @@ mixin _$AppError {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -83,6 +86,8 @@ mixin _$AppError {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,6 +105,7 @@ mixin _$AppError {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -117,6 +123,7 @@ mixin _$AppError {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -191,6 +198,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return emailAlreadyInUse();
   }
@@ -211,6 +219,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -231,6 +240,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -255,6 +265,8 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -275,6 +287,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -295,6 +308,7 @@ class _$_EmailAleadyInUse implements _EmailAleadyInUse {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -361,6 +375,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return invalidEmail();
   }
@@ -381,6 +396,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return invalidEmail?.call();
   }
@@ -401,6 +417,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -425,6 +442,8 @@ class _$_InvalidEmail implements _InvalidEmail {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return invalidEmail(this);
   }
@@ -445,6 +464,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return invalidEmail?.call(this);
   }
@@ -465,6 +485,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -532,6 +553,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return operationNotAllowed();
   }
@@ -552,6 +574,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return operationNotAllowed?.call();
   }
@@ -572,6 +595,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -596,6 +620,8 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return operationNotAllowed(this);
   }
@@ -616,6 +642,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -636,6 +663,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -703,6 +731,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return requiresRecentLogin();
   }
@@ -723,6 +752,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return requiresRecentLogin?.call();
   }
@@ -743,6 +773,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (requiresRecentLogin != null) {
@@ -767,6 +798,8 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return requiresRecentLogin(this);
   }
@@ -787,6 +820,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return requiresRecentLogin?.call(this);
   }
@@ -807,6 +841,7 @@ class _$_RequiresRecentLogin implements _RequiresRecentLogin {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (requiresRecentLogin != null) {
@@ -873,6 +908,7 @@ class _$_UserDisabled implements _UserDisabled {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return userDisabled();
   }
@@ -893,6 +929,7 @@ class _$_UserDisabled implements _UserDisabled {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return userDisabled?.call();
   }
@@ -913,6 +950,7 @@ class _$_UserDisabled implements _UserDisabled {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -937,6 +975,8 @@ class _$_UserDisabled implements _UserDisabled {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return userDisabled(this);
   }
@@ -957,6 +997,7 @@ class _$_UserDisabled implements _UserDisabled {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return userDisabled?.call(this);
   }
@@ -977,6 +1018,7 @@ class _$_UserDisabled implements _UserDisabled {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -1043,6 +1085,7 @@ class _$_UserNotFound implements _UserNotFound {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return userNotFound();
   }
@@ -1063,6 +1106,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return userNotFound?.call();
   }
@@ -1083,6 +1127,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1107,6 +1152,8 @@ class _$_UserNotFound implements _UserNotFound {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return userNotFound(this);
   }
@@ -1127,6 +1174,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return userNotFound?.call(this);
   }
@@ -1147,6 +1195,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1213,6 +1262,7 @@ class _$_WeakPassword implements _WeakPassword {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return weakPassword();
   }
@@ -1233,6 +1283,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return weakPassword?.call();
   }
@@ -1253,6 +1304,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1277,6 +1329,8 @@ class _$_WeakPassword implements _WeakPassword {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return weakPassword(this);
   }
@@ -1297,6 +1351,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return weakPassword?.call(this);
   }
@@ -1317,6 +1372,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1383,6 +1439,7 @@ class _$_WrongPassword implements _WrongPassword {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return wrongPassword();
   }
@@ -1403,6 +1460,7 @@ class _$_WrongPassword implements _WrongPassword {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return wrongPassword?.call();
   }
@@ -1423,6 +1481,7 @@ class _$_WrongPassword implements _WrongPassword {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -1447,6 +1506,8 @@ class _$_WrongPassword implements _WrongPassword {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return wrongPassword(this);
   }
@@ -1467,6 +1528,7 @@ class _$_WrongPassword implements _WrongPassword {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return wrongPassword?.call(this);
   }
@@ -1487,6 +1549,7 @@ class _$_WrongPassword implements _WrongPassword {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -1553,6 +1616,7 @@ class _$_Undefined implements _Undefined {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return undefined();
   }
@@ -1573,6 +1637,7 @@ class _$_Undefined implements _Undefined {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return undefined?.call();
   }
@@ -1593,6 +1658,7 @@ class _$_Undefined implements _Undefined {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (undefined != null) {
@@ -1617,6 +1683,8 @@ class _$_Undefined implements _Undefined {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return undefined(this);
   }
@@ -1637,6 +1705,7 @@ class _$_Undefined implements _Undefined {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return undefined?.call(this);
   }
@@ -1657,6 +1726,7 @@ class _$_Undefined implements _Undefined {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (undefined != null) {
@@ -1724,6 +1794,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return noInternetConnection();
   }
@@ -1744,6 +1815,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return noInternetConnection?.call();
   }
@@ -1764,6 +1836,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (noInternetConnection != null) {
@@ -1788,6 +1861,8 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return noInternetConnection(this);
   }
@@ -1808,6 +1883,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return noInternetConnection?.call(this);
   }
@@ -1828,6 +1904,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (noInternetConnection != null) {
@@ -1894,6 +1971,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return errorOccurred();
   }
@@ -1914,6 +1992,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return errorOccurred?.call();
   }
@@ -1934,6 +2013,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (errorOccurred != null) {
@@ -1958,6 +2038,8 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return errorOccurred(this);
   }
@@ -1978,6 +2060,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return errorOccurred?.call(this);
   }
@@ -1998,6 +2081,7 @@ class _$_ErrorOccurred implements _ErrorOccurred {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (errorOccurred != null) {
@@ -2065,6 +2149,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return registerProfileError();
   }
@@ -2085,6 +2170,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return registerProfileError?.call();
   }
@@ -2105,6 +2191,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (registerProfileError != null) {
@@ -2129,6 +2216,8 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return registerProfileError(this);
   }
@@ -2149,6 +2238,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return registerProfileError?.call(this);
   }
@@ -2169,6 +2259,7 @@ class _$_RegisterProfileError implements _RegisterProfileError {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (registerProfileError != null) {
@@ -2236,6 +2327,7 @@ class _$_FetchChatRoomError implements _FetchChatRoomError {
     required TResult Function() errorOccurred,
     required TResult Function() registerProfileError,
     required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
   }) {
     return fetchChatRoomError();
   }
@@ -2256,6 +2348,7 @@ class _$_FetchChatRoomError implements _FetchChatRoomError {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
   }) {
     return fetchChatRoomError?.call();
   }
@@ -2276,6 +2369,7 @@ class _$_FetchChatRoomError implements _FetchChatRoomError {
     TResult Function()? errorOccurred,
     TResult Function()? registerProfileError,
     TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (fetchChatRoomError != null) {
@@ -2300,6 +2394,8 @@ class _$_FetchChatRoomError implements _FetchChatRoomError {
     required TResult Function(_ErrorOccurred value) errorOccurred,
     required TResult Function(_RegisterProfileError value) registerProfileError,
     required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
   }) {
     return fetchChatRoomError(this);
   }
@@ -2320,6 +2416,7 @@ class _$_FetchChatRoomError implements _FetchChatRoomError {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
   }) {
     return fetchChatRoomError?.call(this);
   }
@@ -2340,6 +2437,7 @@ class _$_FetchChatRoomError implements _FetchChatRoomError {
     TResult Function(_ErrorOccurred value)? errorOccurred,
     TResult Function(_RegisterProfileError value)? registerProfileError,
     TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
     required TResult orElse(),
   }) {
     if (fetchChatRoomError != null) {
@@ -2351,4 +2449,184 @@ class _$_FetchChatRoomError implements _FetchChatRoomError {
 
 abstract class _FetchChatRoomError implements AppError {
   const factory _FetchChatRoomError() = _$_FetchChatRoomError;
+}
+
+/// @nodoc
+abstract class _$$_FetchChatMessagesErrorCopyWith<$Res> {
+  factory _$$_FetchChatMessagesErrorCopyWith(_$_FetchChatMessagesError value,
+          $Res Function(_$_FetchChatMessagesError) then) =
+      __$$_FetchChatMessagesErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_FetchChatMessagesErrorCopyWithImpl<$Res>
+    extends _$AppErrorCopyWithImpl<$Res>
+    implements _$$_FetchChatMessagesErrorCopyWith<$Res> {
+  __$$_FetchChatMessagesErrorCopyWithImpl(_$_FetchChatMessagesError _value,
+      $Res Function(_$_FetchChatMessagesError) _then)
+      : super(_value, (v) => _then(v as _$_FetchChatMessagesError));
+
+  @override
+  _$_FetchChatMessagesError get _value =>
+      super._value as _$_FetchChatMessagesError;
+}
+
+/// @nodoc
+
+class _$_FetchChatMessagesError implements _FetchChatMessagesError {
+  const _$_FetchChatMessagesError();
+
+  @override
+  String toString() {
+    return 'AppError.fetchChatMessagesError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_FetchChatMessagesError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() requiresRecentLogin,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() weakPassword,
+    required TResult Function() wrongPassword,
+    required TResult Function() undefined,
+    required TResult Function() noInternetConnection,
+    required TResult Function() errorOccurred,
+    required TResult Function() registerProfileError,
+    required TResult Function() fetchChatRoomError,
+    required TResult Function() fetchChatMessagesError,
+  }) {
+    return fetchChatMessagesError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? requiresRecentLogin,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? wrongPassword,
+    TResult Function()? undefined,
+    TResult Function()? noInternetConnection,
+    TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
+  }) {
+    return fetchChatMessagesError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? requiresRecentLogin,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? wrongPassword,
+    TResult Function()? undefined,
+    TResult Function()? noInternetConnection,
+    TResult Function()? errorOccurred,
+    TResult Function()? registerProfileError,
+    TResult Function()? fetchChatRoomError,
+    TResult Function()? fetchChatMessagesError,
+    required TResult orElse(),
+  }) {
+    if (fetchChatMessagesError != null) {
+      return fetchChatMessagesError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_EmailAleadyInUse value) emailAlreadyInUse,
+    required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_RequiresRecentLogin value) requiresRecentLogin,
+    required TResult Function(_UserDisabled value) userDisabled,
+    required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_WeakPassword value) weakPassword,
+    required TResult Function(_WrongPassword value) wrongPassword,
+    required TResult Function(_Undefined value) undefined,
+    required TResult Function(_NoInternetConnection value) noInternetConnection,
+    required TResult Function(_ErrorOccurred value) errorOccurred,
+    required TResult Function(_RegisterProfileError value) registerProfileError,
+    required TResult Function(_FetchChatRoomError value) fetchChatRoomError,
+    required TResult Function(_FetchChatMessagesError value)
+        fetchChatMessagesError,
+  }) {
+    return fetchChatMessagesError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_EmailAleadyInUse value)? emailAlreadyInUse,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_RequiresRecentLogin value)? requiresRecentLogin,
+    TResult Function(_UserDisabled value)? userDisabled,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_Undefined value)? undefined,
+    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
+  }) {
+    return fetchChatMessagesError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_EmailAleadyInUse value)? emailAlreadyInUse,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_RequiresRecentLogin value)? requiresRecentLogin,
+    TResult Function(_UserDisabled value)? userDisabled,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_Undefined value)? undefined,
+    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_ErrorOccurred value)? errorOccurred,
+    TResult Function(_RegisterProfileError value)? registerProfileError,
+    TResult Function(_FetchChatRoomError value)? fetchChatRoomError,
+    TResult Function(_FetchChatMessagesError value)? fetchChatMessagesError,
+    required TResult orElse(),
+  }) {
+    if (fetchChatMessagesError != null) {
+      return fetchChatMessagesError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchChatMessagesError implements AppError {
+  const factory _FetchChatMessagesError() = _$_FetchChatMessagesError;
 }

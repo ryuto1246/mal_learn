@@ -6,6 +6,7 @@ part 'chat_room_summary.freezed.dart';
 @freezed
 class ChatRoomSummary with _$ChatRoomSummary {
   const factory ChatRoomSummary({
+    required String id,
     required String? name,
     required DateTime? lastMessageAt,
     required String? iconPath,

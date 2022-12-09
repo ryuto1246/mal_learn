@@ -19,4 +19,5 @@ class AppError with _$AppError {
 
   const factory AppError.registerProfileError() = _RegisterProfileError;
   const factory AppError.fetchChatRoomError() = _FetchChatRoomError;
+  const factory AppError.fetchChatMessagesError() = _FetchChatMessagesError;
 }
