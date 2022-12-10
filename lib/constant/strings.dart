@@ -16,4 +16,6 @@ class Strings {
   //Screen Title
   static const profileLabel = 'プロフィール';
   static const chatListLabel = 'チャット';
+
+  static const noMessage = '';
 }

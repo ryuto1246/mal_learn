@@ -20,7 +20,7 @@ mixin _$ChatUiState {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
-    required TResult Function(List<ChatMessage> chatMessage)
+    required TResult Function(Stream<List<ChatMessage>> chatMessage)
         messageFetchSuccess,
     required TResult Function(AppError error) failure,
   }) =>
@@ -29,7 +29,8 @@ mixin _$ChatUiState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,7 +38,8 @@ mixin _$ChatUiState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
   }) =>
@@ -125,7 +127,7 @@ class _$_Init implements _Init {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
-    required TResult Function(List<ChatMessage> chatMessage)
+    required TResult Function(Stream<List<ChatMessage>> chatMessage)
         messageFetchSuccess,
     required TResult Function(AppError error) failure,
   }) {
@@ -137,7 +139,8 @@ class _$_Init implements _Init {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
   }) {
     return init?.call();
@@ -148,7 +151,8 @@ class _$_Init implements _Init {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
   }) {
@@ -241,7 +245,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
-    required TResult Function(List<ChatMessage> chatMessage)
+    required TResult Function(Stream<List<ChatMessage>> chatMessage)
         messageFetchSuccess,
     required TResult Function(AppError error) failure,
   }) {
@@ -253,7 +257,8 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
   }) {
     return loading?.call();
@@ -264,7 +269,8 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
   }) {
@@ -321,7 +327,7 @@ abstract class _$$_FetchSuccessCopyWith<$Res> {
   factory _$$_FetchSuccessCopyWith(
           _$_FetchSuccess value, $Res Function(_$_FetchSuccess) then) =
       __$$_FetchSuccessCopyWithImpl<$Res>;
-  $Res call({List<ChatMessage> chatMessage});
+  $Res call({Stream<List<ChatMessage>> chatMessage});
 }
 
 /// @nodoc
@@ -341,9 +347,9 @@ class __$$_FetchSuccessCopyWithImpl<$Res>
   }) {
     return _then(_$_FetchSuccess(
       chatMessage == freezed
-          ? _value._chatMessage
+          ? _value.chatMessage
           : chatMessage // ignore: cast_nullable_to_non_nullable
-              as List<ChatMessage>,
+              as Stream<List<ChatMessage>>,
     ));
   }
 }
@@ -351,15 +357,10 @@ class __$$_FetchSuccessCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_FetchSuccess implements _FetchSuccess {
-  _$_FetchSuccess(final List<ChatMessage> chatMessage)
-      : _chatMessage = chatMessage;
+  _$_FetchSuccess(this.chatMessage);
 
-  final List<ChatMessage> _chatMessage;
   @override
-  List<ChatMessage> get chatMessage {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_chatMessage);
-  }
+  final Stream<List<ChatMessage>> chatMessage;
 
   @override
   String toString() {
@@ -372,12 +373,12 @@ class _$_FetchSuccess implements _FetchSuccess {
         (other.runtimeType == runtimeType &&
             other is _$_FetchSuccess &&
             const DeepCollectionEquality()
-                .equals(other._chatMessage, _chatMessage));
+                .equals(other.chatMessage, chatMessage));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_chatMessage));
+      runtimeType, const DeepCollectionEquality().hash(chatMessage));
 
   @JsonKey(ignore: true)
   @override
@@ -389,7 +390,7 @@ class _$_FetchSuccess implements _FetchSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
-    required TResult Function(List<ChatMessage> chatMessage)
+    required TResult Function(Stream<List<ChatMessage>> chatMessage)
         messageFetchSuccess,
     required TResult Function(AppError error) failure,
   }) {
@@ -401,7 +402,8 @@ class _$_FetchSuccess implements _FetchSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
   }) {
     return messageFetchSuccess?.call(chatMessage);
@@ -412,7 +414,8 @@ class _$_FetchSuccess implements _FetchSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
   }) {
@@ -461,9 +464,10 @@ class _$_FetchSuccess implements _FetchSuccess {
 }
 
 abstract class _FetchSuccess implements ChatUiState {
-  factory _FetchSuccess(final List<ChatMessage> chatMessage) = _$_FetchSuccess;
+  factory _FetchSuccess(final Stream<List<ChatMessage>> chatMessage) =
+      _$_FetchSuccess;
 
-  List<ChatMessage> get chatMessage;
+  Stream<List<ChatMessage>> get chatMessage;
   @JsonKey(ignore: true)
   _$$_FetchSuccessCopyWith<_$_FetchSuccess> get copyWith =>
       throw _privateConstructorUsedError;
@@ -543,7 +547,7 @@ class _$_Failure implements _Failure {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() loading,
-    required TResult Function(List<ChatMessage> chatMessage)
+    required TResult Function(Stream<List<ChatMessage>> chatMessage)
         messageFetchSuccess,
     required TResult Function(AppError error) failure,
   }) {
@@ -555,7 +559,8 @@ class _$_Failure implements _Failure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
   }) {
     return failure?.call(error);
@@ -566,7 +571,8 @@ class _$_Failure implements _Failure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? loading,
-    TResult Function(List<ChatMessage> chatMessage)? messageFetchSuccess,
+    TResult Function(Stream<List<ChatMessage>> chatMessage)?
+        messageFetchSuccess,
     TResult Function(AppError error)? failure,
     required TResult orElse(),
   }) {

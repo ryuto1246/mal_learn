@@ -9,7 +9,7 @@ class ChatUiState with _$ChatUiState {
   factory ChatUiState.init() = _Init;
   factory ChatUiState.loading() = _Loading;
   factory ChatUiState.messageFetchSuccess(
-    List<ChatMessage> chatMessage,
+    Stream<List<ChatMessage>> chatMessage,
   ) = _FetchSuccess;
   factory ChatUiState.failure(AppError error) = _Failure;
 }

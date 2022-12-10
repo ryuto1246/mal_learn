@@ -7,7 +7,6 @@ import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/test_style.dart';
 import 'package:mal_learn/model/chat_room_summary.dart';
 import 'package:mal_learn/model/user.dart';
-import 'package:mal_learn/provider/chat_provider.dart';
 import 'package:mal_learn/provider/chat_room_list_provider.dart';
 import 'package:mal_learn/view/chat_room_screen.dart';
 

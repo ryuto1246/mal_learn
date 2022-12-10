@@ -40,11 +40,21 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
                 leadingWidth: 75,
                 titleSpacing: 0,
               ),
-              body: ListView.builder(
-                itemCount: chatMessages.length,
-                itemBuilder: (context, index) {
-                  return Text(chatMessages[index].text);
+              body: StreamBuilder(
+                stream: chatMessages,
+                builder: (BuildContext context, AsyncSnapshot snapshot) {
+                  if (!snapshot.hasData) {
+                    //TODO: まだメッセージがない時の画面
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  return ListView.builder(
+                    itemCount: snapshot.data.length,
+                    itemBuilder: (context, index) {
+                      return Text(snapshot.data[index].text);
+                    },
+                  );
                 },
+                //TODO: メッセージ読み込みエラー発生時の画面
               ),
             );
           },
