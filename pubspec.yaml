@@ -19,6 +19,7 @@ dependencies:
   intl: ^0.17.0
   flutter_datetime_picker: ^1.5.1
   cloud_firestore: ^3.5.1
+  fluttertoast: ^8.1.2
 
 dev_dependencies:
   flutter_test:

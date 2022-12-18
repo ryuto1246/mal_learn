@@ -71,8 +71,7 @@ class UserProfileViewModel extends StateNotifier<UserProfileUiState> {
       id: data['id'],
       userName: data['userName'],
       birthDay: (data['birthDay'] as Timestamp).toDate(),
-      iconPath: '',
-      //TODO: IconPathを読み込み
+      iconPath: data['iconPath'],
     );
 
     _user = appUser;

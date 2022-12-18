@@ -39,8 +39,7 @@ final userProfileProvider = FutureProvider.autoDispose.family<AppUser?, String>(
       id: data['id'],
       userName: data['userName'],
       birthDay: (data['birthDay'] as Timestamp).toDate(),
-      iconPath: '',
-      //TODO: IconPathを読み込み
+      iconPath: data['iconPath'],
     );
   },
 );

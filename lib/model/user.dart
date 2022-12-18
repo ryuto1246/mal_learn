@@ -9,6 +9,6 @@ class AppUser with _$AppUser {
     required String id,
     required String userName,
     required DateTime birthDay,
-    required String iconPath,
+    required String? iconPath,
   }) = _AppUser;
 }

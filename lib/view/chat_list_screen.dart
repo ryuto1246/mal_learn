@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/component/circle_button.dart';
 import 'package:mal_learn/constant/assets.dart';
-import 'package:mal_learn/constant/colors.dart';
 import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/test_style.dart';
 import 'package:mal_learn/model/chat_room_summary.dart';

@@ -20,7 +20,7 @@ mixin _$AppUser {
   String get id => throw _privateConstructorUsedError;
   String get userName => throw _privateConstructorUsedError;
   DateTime get birthDay => throw _privateConstructorUsedError;
-  String get iconPath => throw _privateConstructorUsedError;
+  String? get iconPath => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppUserCopyWith<AppUser> get copyWith => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $AppUserCopyWith<$Res> {
       String id,
       String userName,
       DateTime birthDay,
-      String iconPath});
+      String? iconPath});
 }
 
 /// @nodoc
@@ -74,7 +74,7 @@ class _$AppUserCopyWithImpl<$Res> implements $AppUserCopyWith<$Res> {
       iconPath: iconPath == freezed
           ? _value.iconPath
           : iconPath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -90,7 +90,7 @@ abstract class _$$_AppUserCopyWith<$Res> implements $AppUserCopyWith<$Res> {
       String id,
       String userName,
       DateTime birthDay,
-      String iconPath});
+      String? iconPath});
 }
 
 /// @nodoc
@@ -130,7 +130,7 @@ class __$$_AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
       iconPath: iconPath == freezed
           ? _value.iconPath
           : iconPath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -154,7 +154,7 @@ class _$_AppUser implements _AppUser {
   @override
   final DateTime birthDay;
   @override
-  final String iconPath;
+  final String? iconPath;
 
   @override
   String toString() {
@@ -194,7 +194,7 @@ abstract class _AppUser implements AppUser {
       required final String id,
       required final String userName,
       required final DateTime birthDay,
-      required final String iconPath}) = _$_AppUser;
+      required final String? iconPath}) = _$_AppUser;
 
   @override
   String get uid;
@@ -205,7 +205,7 @@ abstract class _AppUser implements AppUser {
   @override
   DateTime get birthDay;
   @override
-  String get iconPath;
+  String? get iconPath;
   @override
   @JsonKey(ignore: true)
   _$$_AppUserCopyWith<_$_AppUser> get copyWith =>

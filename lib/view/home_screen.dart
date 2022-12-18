@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mal_learn/component/overlay_loading_page.dart';
 import 'package:mal_learn/constant/strings.dart';
 import 'package:mal_learn/core/logger.dart';
@@ -57,23 +58,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             return const OverlayLoadingPage();
           },
           success: _buildHomeScreen,
-          // TODO: Error Page
           failure: () {
             logger.e('failed to fetch profile.');
+            Fluttertoast.showToast(msg: 'ユーザー情報の読み込みに失敗しました。');
             return const OverlayLoadingPage();
           },
           orElse: () => const OverlayLoadingPage(),
         );
-
-    // return ref.watch(userProfileProvider(widget.uid)).when(
-    //       // TODO: Error Page
-    //       error: (error, stackTrace) {
-    //         logger.d('failed to load profile :$error');
-    //         return const OverlayLoadingPage();
-    //       },
-    //       loading: () => const OverlayLoadingPage(),
-    //       data: _buildHomeScreen,
-    //     );
   }
 
   Widget _buildHomeScreen(AppUser? appUser) {

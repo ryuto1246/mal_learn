@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mal_learn/component/app_text_field.dart';
 import 'package:mal_learn/component/form_submit_button.dart';
 import 'package:mal_learn/component/overlay_loading_page.dart';
@@ -73,6 +74,10 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
             return const OverlayLoadingPage();
           },
           loading: () => const OverlayLoadingPage(),
+          failure: (e) {
+            Fluttertoast.showToast(msg: e.toString());
+            return _buildSignInScreen();
+          },
           orElse: _buildSignInScreen,
         );
   }
