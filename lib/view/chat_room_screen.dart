@@ -61,6 +61,7 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
 
   Widget _buildInputBox(BuildContext context, WidgetRef ref) {
     final chatViewModel = ref.read(chatViewModelProvider.notifier);
+    final controller = TextEditingController();
 
     return Padding(
       padding: const EdgeInsets.only(
@@ -75,7 +76,10 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
           borderRadius: BorderRadius.circular(30),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: Dimens.paddingS),
+          padding: const EdgeInsets.only(
+            left: Dimens.paddingM,
+            right: Dimens.paddingXS,
+          ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -84,11 +88,11 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
                   maxLength: null,
                   minLines: null,
                   decoration: const InputDecoration(border: InputBorder.none),
-                  onChanged: chatViewModel.onInputChanged,
+                  controller: controller,
                 ),
               ),
               IconButton(
-                onPressed: chatViewModel.sendChatMessage,
+                onPressed: () => chatViewModel.sendChatMessage(controller),
                 icon: const Icon(Icons.send),
               )
             ],
@@ -167,4 +171,3 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
     );
   }
 }
-

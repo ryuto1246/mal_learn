@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:mal_learn/core/logger.dart';
 import 'package:mal_learn/model/ui/chat_ui_state.dart';
 import 'package:mal_learn/model/user.dart';
 import 'package:mal_learn/repository/chat_repository.dart';
@@ -12,7 +14,6 @@ class ChatViewModel extends StateNotifier<ChatUiState> {
   final ChatRepository _chatRepository;
   late String _roomId;
   late AppUser _user;
-  String? _inputText;
 
   init(String roomId, AppUser user) {
     _roomId = roomId;
@@ -25,20 +26,20 @@ class ChatViewModel extends StateNotifier<ChatUiState> {
     state = ChatUiState.messageFetchSuccess(chatMessages);
   }
 
-  onInputChanged(String text) {
-    _inputText = text;
-  }
+  sendChatMessage(TextEditingController controller) {
+    final inputText = controller.text;
 
-  sendChatMessage() {
-    if (_inputText == null || _inputText == '') {
-      //TODO: 送信に失敗した時のエラーハンドリング
+    if (inputText == '') {
+      logger.e('Text Field is empty');
       return;
     }
 
     _chatRepository.sendMessage(
       roomId: _roomId,
       uid: _user.uid,
-      text: _inputText!,
+      text: inputText,
     );
+
+    controller.text = '';
   }
 }
