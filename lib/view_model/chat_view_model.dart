@@ -30,7 +30,7 @@ class ChatViewModel extends StateNotifier<ChatUiState> {
   }
 
   sendChatMessage() {
-    if (_inputText == null) {
+    if (_inputText == null || _inputText == '') {
       //TODO: 送信に失敗した時のエラーハンドリング
       return;
     }

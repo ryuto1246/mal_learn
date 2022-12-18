@@ -6,8 +6,8 @@ class AppColors {
   static const accentColor = Color(0xFF5AADA9);
   static const teelBackgroundColor = Color.fromARGB(255, 192, 243, 240);
   static const darkGray = Color(0xFF606060);
-  static const gray = Color(0xFFC0C0C0);
-  static const white = Color(0x1AFFFFFF);
+  static const gray = Color.fromARGB(255, 207, 207, 207);
+  static const white = Color(0xFFFFFFFF);
   static const black = Color(0xFF000000);
   static const red = Color(0xFFF53A32);
   static const green = Color(0xFF9ACD32);

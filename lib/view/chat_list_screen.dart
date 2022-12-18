@@ -82,7 +82,7 @@ class ChatListScreen extends ConsumerWidget {
         ),
         child: Text('チャット', style: AppTextStyle.headline.bold),
       ),
-      backgroundColor: AppColors.white,
+      backgroundColor: Theme.of(context).canvasColor,
       elevation: 0,
       centerTitle: false,
       actions: [

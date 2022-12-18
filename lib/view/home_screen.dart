@@ -54,7 +54,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   .read(userProfileViewModelProvider.notifier)
                   .fetchUserProfile(widget.uid);
             });
-            logger.d('state is init');
             return const OverlayLoadingPage();
           },
           success: _buildHomeScreen,

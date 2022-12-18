@@ -49,7 +49,7 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
               ),
               body: Column(
                 children: [
-                  _buildMessagesList(chatMessages),
+                  _buildMessagesList(ref, chatMessages),
                   _buildInputBox(context, ref),
                 ],
               ),
@@ -99,24 +99,72 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
   }
 
   Widget _buildMessagesList(
+    WidgetRef ref,
     Stream<List<ChatMessage>> chatMessages,
   ) {
     return Expanded(
       child: StreamBuilder(
         stream: chatMessages,
-        builder: (BuildContext context, AsyncSnapshot snapshot) {
+        builder:
+            (BuildContext context, AsyncSnapshot<List<ChatMessage>> snapshot) {
           if (!snapshot.hasData) {
             //TODO: まだメッセージがない時の画面
             return const Center(child: CircularProgressIndicator());
           }
           return ListView.builder(
-            itemCount: snapshot.data.length,
+            itemCount: snapshot.data!.length,
+            reverse: true,
             itemBuilder: (context, index) {
-              return Text(snapshot.data[index].text);
+              return _buildTextBaloon(ref, snapshot.data![index]);
             },
           );
         },
       ),
     );
   }
+
+  Widget _buildTextBaloon(WidgetRef ref, ChatMessage message) {
+    final uid = ref.read(userProfileViewModelProvider.notifier).user!.uid;
+    final isSender = message.sentBy == uid;
+    final sentAt = message.sentAt;
+
+    final children = [
+      ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 300),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: Dimens.paddingXXS,
+            horizontal: Dimens.paddingXS,
+          ),
+          child: Container(
+            decoration: BoxDecoration(
+              color: isSender ? AppColors.accentColor : AppColors.gray,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            padding: const EdgeInsets.symmetric(
+              vertical: Dimens.paddingS,
+              horizontal: Dimens.paddingM,
+            ),
+            child: Text(
+              message.text,
+              style: TextStyle(
+                color: isSender ? AppColors.white : AppColors.black,
+              ),
+            ),
+          ),
+        ),
+      ),
+      Text(
+        '${sentAt.hour}:${sentAt.minute.toString().padLeft(2, '0')}',
+        style: AppTextStyle.label.small.gray,
+      ),
+    ];
+
+    return Row(
+      mainAxisAlignment:
+          isSender ? MainAxisAlignment.end : MainAxisAlignment.start,
+      children: isSender ? children.reversed.toList() : children,
+    );
+  }
 }
+
