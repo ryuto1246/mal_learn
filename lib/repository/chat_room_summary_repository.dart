@@ -16,6 +16,7 @@ class ChatRoomListRepositoryImpliment extends ChatRoomListRepository {
       final snapshot = await FirebaseFirestore.instance
           .collection('rooms')
           .where('members', arrayContains: uid)
+          // .orderBy('lastMessageAt')
           .get();
 
       final chatRoomList = snapshot.docs.map((doc) {

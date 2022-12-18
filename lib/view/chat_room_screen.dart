@@ -1,5 +1,8 @@
+import 'package:extended_text/extended_text.dart';
+import 'package:extended_text_field/extended_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:mal_learn/component/chat_text_span.dart';
 import 'package:mal_learn/component/overlay_loading_page.dart';
 import 'package:mal_learn/constant/colors.dart';
 import 'package:mal_learn/constant/dimens.dart';
@@ -84,11 +87,12 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                child: TextField(
+                child: ExtendedTextField(
                   maxLength: null,
                   minLines: null,
                   decoration: const InputDecoration(border: InputBorder.none),
                   controller: controller,
+                  specialTextSpanBuilder: ChatTextSpanBuilder(),
                 ),
               ),
               IconButton(
@@ -149,8 +153,9 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
               vertical: Dimens.paddingS,
               horizontal: Dimens.paddingM,
             ),
-            child: Text(
+            child: ExtendedText(
               message.text,
+              specialTextSpanBuilder: ChatTextSpanBuilder(),
               style: TextStyle(
                 color: isSender ? AppColors.white : AppColors.black,
               ),
