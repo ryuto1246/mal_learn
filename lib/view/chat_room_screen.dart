@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/component/overlay_loading_page.dart';
 import 'package:mal_learn/constant/colors.dart';
+import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/test_style.dart';
+import 'package:mal_learn/core/logger.dart';
+import 'package:mal_learn/model/chat_message.dart';
 import 'package:mal_learn/provider/chat_provider.dart';
+import 'package:mal_learn/provider/user_profile_provider.dart';
 
 class ChatRoomScreen extends ConsumerStatefulWidget {
-  const ChatRoomScreen(this.id, {super.key});
+  const ChatRoomScreen(this.roomId, {super.key});
 
-  final String id;
+  final String roomId;
 
   @override
   ConsumerState<ChatRoomScreen> createState() => _ChatRoomScreenState();
@@ -18,7 +22,10 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(chatViewModelProvider.notifier).fetchChatMessagesList(widget.id);
+      logger.d(ref.read(userProfileViewModelProvider.notifier).user?.uid);
+      final user = ref.read(userProfileViewModelProvider.notifier).user!;
+      ref.read(chatViewModelProvider.notifier).init(widget.roomId, user);
+      ref.read(chatViewModelProvider.notifier).fetchChatMessagesList();
     });
     super.initState();
   }
@@ -40,25 +47,76 @@ class _ChatRoomScreenState extends ConsumerState<ChatRoomScreen> {
                 leadingWidth: 75,
                 titleSpacing: 0,
               ),
-              body: StreamBuilder(
-                stream: chatMessages,
-                builder: (BuildContext context, AsyncSnapshot snapshot) {
-                  if (!snapshot.hasData) {
-                    //TODO: まだメッセージがない時の画面
-                    return const Center(child: CircularProgressIndicator());
-                  }
-                  return ListView.builder(
-                    itemCount: snapshot.data.length,
-                    itemBuilder: (context, index) {
-                      return Text(snapshot.data[index].text);
-                    },
-                  );
-                },
-                //TODO: メッセージ読み込みエラー発生時の画面
+              body: Column(
+                children: [
+                  _buildMessagesList(chatMessages),
+                  _buildInputBox(context, ref),
+                ],
               ),
             );
           },
           orElse: () => const OverlayLoadingPage(),
         );
+  }
+
+  Widget _buildInputBox(BuildContext context, WidgetRef ref) {
+    final chatViewModel = ref.read(chatViewModelProvider.notifier);
+
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: Dimens.paddingM,
+        right: Dimens.paddingM,
+        top: Dimens.paddingS,
+        bottom: Dimens.paddingL,
+      ),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: AppColors.teelBackgroundColor,
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: Dimens.paddingS),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: TextField(
+                  maxLength: null,
+                  minLines: null,
+                  decoration: const InputDecoration(border: InputBorder.none),
+                  onChanged: chatViewModel.onInputChanged,
+                ),
+              ),
+              IconButton(
+                onPressed: chatViewModel.sendChatMessage,
+                icon: const Icon(Icons.send),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMessagesList(
+    Stream<List<ChatMessage>> chatMessages,
+  ) {
+    return Expanded(
+      child: StreamBuilder(
+        stream: chatMessages,
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (!snapshot.hasData) {
+            //TODO: まだメッセージがない時の画面
+            return const Center(child: CircularProgressIndicator());
+          }
+          return ListView.builder(
+            itemCount: snapshot.data.length,
+            itemBuilder: (context, index) {
+              return Text(snapshot.data[index].text);
+            },
+          );
+        },
+      ),
+    );
   }
 }

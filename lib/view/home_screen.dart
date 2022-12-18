@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal_learn/component/overlay_loading_page.dart';
 import 'package:mal_learn/constant/strings.dart';
+import 'package:mal_learn/core/logger.dart';
 import 'package:mal_learn/model/user.dart';
 import 'package:mal_learn/provider/user_profile_provider.dart';
 import 'package:mal_learn/view/chat_list_screen.dart';
@@ -46,12 +47,34 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ref.watch(userProfileProvider(widget.uid)).when(
+    return ref.watch(userProfileViewModelProvider).maybeWhen(
+          init: () {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              ref
+                  .read(userProfileViewModelProvider.notifier)
+                  .fetchUserProfile(widget.uid);
+            });
+            logger.d('state is init');
+            return const OverlayLoadingPage();
+          },
+          success: _buildHomeScreen,
           // TODO: Error Page
-          error: (error, stackTrace) => const OverlayLoadingPage(),
-          loading: () => const OverlayLoadingPage(),
-          data: _buildHomeScreen,
+          failure: () {
+            logger.e('failed to fetch profile.');
+            return const OverlayLoadingPage();
+          },
+          orElse: () => const OverlayLoadingPage(),
         );
+
+    // return ref.watch(userProfileProvider(widget.uid)).when(
+    //       // TODO: Error Page
+    //       error: (error, stackTrace) {
+    //         logger.d('failed to load profile :$error');
+    //         return const OverlayLoadingPage();
+    //       },
+    //       loading: () => const OverlayLoadingPage(),
+    //       data: _buildHomeScreen,
+    //     );
   }
 
   Widget _buildHomeScreen(AppUser? appUser) {

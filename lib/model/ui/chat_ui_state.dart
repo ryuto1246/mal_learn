@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mal_learn/model/chat_message.dart';
-import 'package:mal_learn/model/error.dart';
 
 part 'chat_ui_state.freezed.dart';
 
@@ -11,5 +10,6 @@ class ChatUiState with _$ChatUiState {
   factory ChatUiState.messageFetchSuccess(
     Stream<List<ChatMessage>> chatMessage,
   ) = _FetchSuccess;
-  factory ChatUiState.failure(AppError error) = _Failure;
+  factory ChatUiState.messageFetchfailure(Exception error) =
+      _MessageFetchFailure;
 }

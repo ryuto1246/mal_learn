@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mal_learn/core/logger.dart';
-import 'package:mal_learn/model/error.dart';
 import 'package:mal_learn/model/result.dart';
-import 'package:mal_learn/core/to_app_error_extention.dart';
 
 abstract class AuthRepository {
   Future<Result<User>> signUp(
@@ -38,14 +36,14 @@ class AuthRepositoryImplement implements AuthRepository {
 
       if (user == null) {
         logger.e('Failed to create User.');
-        return Result.failure(const AppError.undefined());
+        return Result.failure(Exception('Failed to create User'));
       }
 
       logger.d('User successfully created. $user');
       return Result.success(user);
     } on FirebaseAuthException catch (e) {
       logger.e('Failed to create user: $e');
-      return Result.failure(e.toAppError());
+      return Result.failure(e);
     }
   }
 
@@ -65,14 +63,14 @@ class AuthRepositoryImplement implements AuthRepository {
 
       if (user == null) {
         logger.e('Failed to sign in User.');
-        return Result.failure(const AppError.undefined());
+        return Result.failure(Exception('Failed to sign in user'));
       }
 
       logger.d('User successfully sign in. $user');
       return Result.success(user);
     } on FirebaseAuthException catch (e) {
       logger.e('Failed to sign in User: $e');
-      return Result.failure(e.toAppError());
+      return Result.failure(e);
     }
   }
 }

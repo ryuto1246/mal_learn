@@ -22,7 +22,7 @@ mixin _$AuthUiState {
     required TResult Function() loading,
     required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +31,7 @@ mixin _$AuthUiState {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +40,7 @@ mixin _$AuthUiState {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -132,7 +132,7 @@ class _$_Init implements _Init {
     required TResult Function() loading,
     required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return init();
   }
@@ -144,7 +144,7 @@ class _$_Init implements _Init {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return init?.call();
   }
@@ -156,7 +156,7 @@ class _$_Init implements _Init {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -253,7 +253,7 @@ class _$_Loading implements _Loading {
     required TResult Function() loading,
     required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return loading();
   }
@@ -265,7 +265,7 @@ class _$_Loading implements _Loading {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return loading?.call();
   }
@@ -277,7 +277,7 @@ class _$_Loading implements _Loading {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -400,7 +400,7 @@ class _$_SignInSuccess implements _SignInSuccess {
     required TResult Function() loading,
     required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return signInSuccess(user);
   }
@@ -412,7 +412,7 @@ class _$_SignInSuccess implements _SignInSuccess {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return signInSuccess?.call(user);
   }
@@ -424,7 +424,7 @@ class _$_SignInSuccess implements _SignInSuccess {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (signInSuccess != null) {
@@ -552,7 +552,7 @@ class _$_SignUpSuccess implements _SignUpSuccess {
     required TResult Function() loading,
     required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return signUpSuccess(user);
   }
@@ -564,7 +564,7 @@ class _$_SignUpSuccess implements _SignUpSuccess {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return signUpSuccess?.call(user);
   }
@@ -576,7 +576,7 @@ class _$_SignUpSuccess implements _SignUpSuccess {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (signUpSuccess != null) {
@@ -640,9 +640,7 @@ abstract class _$$_AuthFailureCopyWith<$Res> {
   factory _$$_AuthFailureCopyWith(
           _$_AuthFailure value, $Res Function(_$_AuthFailure) then) =
       __$$_AuthFailureCopyWithImpl<$Res>;
-  $Res call({AppError error});
-
-  $AppErrorCopyWith<$Res> get error;
+  $Res call({Exception error});
 }
 
 /// @nodoc
@@ -663,15 +661,8 @@ class __$$_AuthFailureCopyWithImpl<$Res> extends _$AuthUiStateCopyWithImpl<$Res>
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
-              as AppError,
+              as Exception,
     ));
-  }
-
-  @override
-  $AppErrorCopyWith<$Res> get error {
-    return $AppErrorCopyWith<$Res>(_value.error, (value) {
-      return _then(_value.copyWith(error: value));
-    });
   }
 }
 
@@ -681,7 +672,7 @@ class _$_AuthFailure implements _AuthFailure {
   _$_AuthFailure(this.error);
 
   @override
-  final AppError error;
+  final Exception error;
 
   @override
   String toString() {
@@ -712,7 +703,7 @@ class _$_AuthFailure implements _AuthFailure {
     required TResult Function() loading,
     required TResult Function(User user) signInSuccess,
     required TResult Function(User user) signUpSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return failure(error);
   }
@@ -724,7 +715,7 @@ class _$_AuthFailure implements _AuthFailure {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return failure?.call(error);
   }
@@ -736,7 +727,7 @@ class _$_AuthFailure implements _AuthFailure {
     TResult Function()? loading,
     TResult Function(User user)? signInSuccess,
     TResult Function(User user)? signUpSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -787,9 +778,9 @@ class _$_AuthFailure implements _AuthFailure {
 }
 
 abstract class _AuthFailure implements AuthUiState {
-  factory _AuthFailure(final AppError error) = _$_AuthFailure;
+  factory _AuthFailure(final Exception error) = _$_AuthFailure;
 
-  AppError get error;
+  Exception get error;
   @JsonKey(ignore: true)
   _$$_AuthFailureCopyWith<_$_AuthFailure> get copyWith =>
       throw _privateConstructorUsedError;

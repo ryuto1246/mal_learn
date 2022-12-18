@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:mal_learn/core/logger.dart';
 import 'package:mal_learn/model/chat_room_summary.dart';
-import 'package:mal_learn/model/error.dart';
 import 'package:mal_learn/model/result.dart';
 import 'package:mal_learn/core/to_chat_type.dart';
 
@@ -35,7 +34,7 @@ class ChatRoomListRepositoryImpliment extends ChatRoomListRepository {
       return Result.success(chatRoomList);
     } on Exception catch (e) {
       logger.e('failed to fetch chat room list: $e');
-      return Result.failure(const AppError.fetchChatRoomError());
+      return Result.failure(e);
     }
   }
 }

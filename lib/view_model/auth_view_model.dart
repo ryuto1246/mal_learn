@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mal_learn/model/error.dart';
 import 'package:mal_learn/model/ui/auth_ui_state.dart';
 import 'package:mal_learn/repository/auth_repository.dart';
 
@@ -11,8 +10,6 @@ class AuthViewModel extends StateNotifier<AuthUiState> {
         super(AuthUiState.init());
 
   final AuthRepository _authRepository;
-
-  User? loginUser;
 
   //アカウント作成
   Future<void> signUp(
@@ -33,10 +30,9 @@ class AuthViewModel extends StateNotifier<AuthUiState> {
     );
     result.when(
       success: (User user) {
-        loginUser = user;
         state = AuthUiState.signUpSuccess(user);
       },
-      failure: (AppError error) {
+      failure: (Exception error) {
         state = AuthUiState.failure(error);
       },
     );
@@ -49,10 +45,9 @@ class AuthViewModel extends StateNotifier<AuthUiState> {
     final result = await _authRepository.signIn(auth, email, password);
     result.when(
       success: (User user) {
-        loginUser = user;
         state = AuthUiState.signInSuccess(user);
       },
-      failure: (AppError error) {
+      failure: (Exception error) {
         state = AuthUiState.failure(error);
       },
     );

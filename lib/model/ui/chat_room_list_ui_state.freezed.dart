@@ -21,7 +21,7 @@ mixin _$ChatRoomListUiState {
     required TResult Function() init,
     required TResult Function() loading,
     required TResult Function(List<ChatRoomSummary> chatRoomList) fetchSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$ChatRoomListUiState {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$ChatRoomListUiState {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,7 +127,7 @@ class _$_Init implements _Init {
     required TResult Function() init,
     required TResult Function() loading,
     required TResult Function(List<ChatRoomSummary> chatRoomList) fetchSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return init();
   }
@@ -138,7 +138,7 @@ class _$_Init implements _Init {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return init?.call();
   }
@@ -149,7 +149,7 @@ class _$_Init implements _Init {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -243,7 +243,7 @@ class _$_Loading implements _Loading {
     required TResult Function() init,
     required TResult Function() loading,
     required TResult Function(List<ChatRoomSummary> chatRoomList) fetchSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return loading();
   }
@@ -254,7 +254,7 @@ class _$_Loading implements _Loading {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return loading?.call();
   }
@@ -265,7 +265,7 @@ class _$_Loading implements _Loading {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -390,7 +390,7 @@ class _$_FetchSuccess implements _FetchSuccess {
     required TResult Function() init,
     required TResult Function() loading,
     required TResult Function(List<ChatRoomSummary> chatRoomList) fetchSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return fetchSuccess(chatRoomList);
   }
@@ -401,7 +401,7 @@ class _$_FetchSuccess implements _FetchSuccess {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return fetchSuccess?.call(chatRoomList);
   }
@@ -412,7 +412,7 @@ class _$_FetchSuccess implements _FetchSuccess {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (fetchSuccess != null) {
@@ -474,9 +474,7 @@ abstract class _$$_FailureCopyWith<$Res> {
   factory _$$_FailureCopyWith(
           _$_Failure value, $Res Function(_$_Failure) then) =
       __$$_FailureCopyWithImpl<$Res>;
-  $Res call({AppError error});
-
-  $AppErrorCopyWith<$Res> get error;
+  $Res call({Exception error});
 }
 
 /// @nodoc
@@ -497,15 +495,8 @@ class __$$_FailureCopyWithImpl<$Res>
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
-              as AppError,
+              as Exception,
     ));
-  }
-
-  @override
-  $AppErrorCopyWith<$Res> get error {
-    return $AppErrorCopyWith<$Res>(_value.error, (value) {
-      return _then(_value.copyWith(error: value));
-    });
   }
 }
 
@@ -515,7 +506,7 @@ class _$_Failure implements _Failure {
   _$_Failure(this.error);
 
   @override
-  final AppError error;
+  final Exception error;
 
   @override
   String toString() {
@@ -545,7 +536,7 @@ class _$_Failure implements _Failure {
     required TResult Function() init,
     required TResult Function() loading,
     required TResult Function(List<ChatRoomSummary> chatRoomList) fetchSuccess,
-    required TResult Function(AppError error) failure,
+    required TResult Function(Exception error) failure,
   }) {
     return failure(error);
   }
@@ -556,7 +547,7 @@ class _$_Failure implements _Failure {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
   }) {
     return failure?.call(error);
   }
@@ -567,7 +558,7 @@ class _$_Failure implements _Failure {
     TResult Function()? init,
     TResult Function()? loading,
     TResult Function(List<ChatRoomSummary> chatRoomList)? fetchSuccess,
-    TResult Function(AppError error)? failure,
+    TResult Function(Exception error)? failure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -615,9 +606,9 @@ class _$_Failure implements _Failure {
 }
 
 abstract class _Failure implements ChatRoomListUiState {
-  factory _Failure(final AppError error) = _$_Failure;
+  factory _Failure(final Exception error) = _$_Failure;
 
-  AppError get error;
+  Exception get error;
   @JsonKey(ignore: true)
   _$$_FailureCopyWith<_$_Failure> get copyWith =>
       throw _privateConstructorUsedError;

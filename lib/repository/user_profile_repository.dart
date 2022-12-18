@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:mal_learn/core/logger.dart';
-import 'package:mal_learn/model/error.dart';
 import 'package:mal_learn/model/result.dart';
 import 'package:mal_learn/model/user.dart';
 import 'package:mal_learn/ui_core/generate_id.dart';
@@ -47,7 +46,7 @@ class UserProfileRepositoryImpliment extends UserProfileRepository {
       );
     } on Exception catch (e) {
       logger.e('failed to register profile: $e');
-      return Result.failure(const AppError.registerProfileError());
+      return Result.failure(Exception(e));
     }
   }
 }

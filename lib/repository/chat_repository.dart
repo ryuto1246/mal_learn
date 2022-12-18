@@ -6,6 +6,11 @@ import 'package:mal_learn/model/chat_message.dart';
 
 abstract class ChatRepository {
   Stream<List<ChatMessage>> fetchChatMessages(String id);
+  void sendMessage({
+    required String roomId,
+    required String uid,
+    required String text,
+  });
 }
 
 class ChatRepositoryImpliment extends ChatRepository {
@@ -37,5 +42,22 @@ class ChatRepositoryImpliment extends ChatRepository {
     );
 
     return stream.transform(transformer);
+  }
+
+  @override
+  void sendMessage({
+    required String roomId,
+    required String uid,
+    required String text,
+  }) {
+    FirebaseFirestore.instance
+        .collection('rooms')
+        .doc(roomId)
+        .collection('messages')
+        .add({
+      'text': text,
+      'sentBy': uid,
+      'sentAt': Timestamp.fromDate(DateTime.now()),
+    });
   }
 }

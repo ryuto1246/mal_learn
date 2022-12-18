@@ -11,7 +11,6 @@ import 'package:mal_learn/constant/assets.dart';
 import 'package:mal_learn/constant/dimens.dart';
 import 'package:mal_learn/constant/strings.dart';
 import 'package:mal_learn/constant/test_style.dart';
-import 'package:mal_learn/model/error.dart';
 import 'package:mal_learn/provider/auth_provider.dart';
 import 'package:mal_learn/provider/user_profile_provider.dart';
 import 'package:mal_learn/view/home_screen.dart';
@@ -99,7 +98,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                     );
                     return const OverlayLoadingPage();
                   },
-                  success: () {
+                  success: (_) {
                     WidgetsBinding.instance.addPostFrameCallback((_) {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute<Scaffold>(
@@ -113,7 +112,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                 );
           },
           loading: () => const OverlayLoadingPage(),
-          failure: (AppError error) {
+          failure: (Exception error) {
             WidgetsBinding.instance.addPostFrameCallback(
               (_) => _initializeState(),
             );
